@@ -1,0 +1,9 @@
+package com.YunusKayne.PetRock;
+
+@Mod(modid="PetRock", name="Pet Rock", version="1.7.10-0.0.1")
+public class PetRock
+{
+	
+}
+
+//DATE: 13/05/2015

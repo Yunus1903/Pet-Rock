@@ -1,0 +1,13 @@
+package com.YunusKayne.PetRock.creativetab;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+import com.YunusKayne.PetRock.reference.Reference;
+
+public class CreativeTab
+{
+	public static final CreativeTabs PetRock_Tab = new CreativeTabs(Reference.MOD_ID.toLowerCase())
+	{
+		
+	}
+}

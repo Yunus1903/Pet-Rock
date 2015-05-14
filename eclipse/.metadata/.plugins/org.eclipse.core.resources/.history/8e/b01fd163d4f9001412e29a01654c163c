@@ -1,0 +1,8 @@
+# Configuration file
+
+general {
+    # This is a test config Value
+    B:configValue=true
+}
+
+

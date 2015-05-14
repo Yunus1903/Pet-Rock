@@ -1,0 +1,15 @@
+package com.YunusKayne.PetRock.creativetab;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+public class CreativeTab
+{
+	public static final CreativeTabs PetRock_Tab = new CreativeTabs(Reference.MOD_ID.toLowerCase())
+	{
+		 @Override
+	        public Item getTabIconItem()
+	        {
+	            return ModItems.mapleLeaf;
+	        }
+	};
+}

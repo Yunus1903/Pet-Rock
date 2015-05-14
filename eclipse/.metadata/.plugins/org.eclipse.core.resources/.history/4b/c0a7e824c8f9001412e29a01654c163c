@@ -1,0 +1,38 @@
+package com.YunusKayne.PetRock.handler;
+
+import java.io.File;
+
+import net.minecraftforge.common.config.Configuration;
+
+import com.YunusKayne.PetRock.reference.Reference;
+
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+public class ConfigHandler
+{
+	public static Configuration configuration;
+	
+	public static void init(File configFile)
+	{
+		if(configuration == null)
+		{
+			Configuration configuration = new Configuration(configFile);
+		}
+	}
+	
+	@SubscribeEvent
+	public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event)
+	{
+		if(event.modID.equalsIgnoreCase(Reference.MOD_ID))
+		{
+			//Resync Config
+		}
+	}
+	
+	public void loadConfiguration()
+	{
+		//This is a config example :)
+		//booleanVariable = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "This is a test config Value").getBoolean(true);
+	}
+}
