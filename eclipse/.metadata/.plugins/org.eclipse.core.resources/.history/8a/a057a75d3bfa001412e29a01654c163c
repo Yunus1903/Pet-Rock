@@ -1,0 +1,17 @@
+package com.YunusKayne.PetRock.blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class oreBase extends Block
+{
+
+	public oreBase(Material rock, String name)
+	{
+		super(rock);
+		this.setBlockName(name);
+	}
+
+
+
+}

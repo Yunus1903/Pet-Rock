@@ -1,0 +1,19 @@
+package com.YunusKayne.PetRock.creativetab;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+
+import com.YunusKayne.PetRock.blocks.Blocks;
+import com.YunusKayne.PetRock.reference.Reference;
+
+public class CreativeTab
+{
+	public static final CreativeTabs PetRockTab = new CreativeTabs(Reference.MOD_ID)
+	{
+		@Override
+		public Block getTabIconBlock()
+		{
+			return Blocks.orePetrium;
+		}
+	};
+}

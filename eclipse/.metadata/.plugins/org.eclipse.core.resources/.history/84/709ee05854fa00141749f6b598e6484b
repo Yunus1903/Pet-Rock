@@ -1,0 +1,8 @@
+package com.YunusKayne.PetRock.items;
+
+import net.minecraft.item.Item;
+
+public class ingotPetrium extends Item
+{
+
+}
