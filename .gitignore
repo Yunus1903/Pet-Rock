@@ -1,0 +1,25 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+
+# IDEA Files #
+*.iml
+*.ipr
+*.iws
+/.idea
+
+# Eclipse #
+/bin
+/.settings
+/.classpath
+/eclipse/
+
+# Gradle #
+/.gradle
+/build
+/libs
+
+
+# iChuns Gitingnore #
