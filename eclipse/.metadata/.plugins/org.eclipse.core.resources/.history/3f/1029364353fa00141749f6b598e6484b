@@ -1,0 +1,17 @@
+[
+{
+"modid": "PetRock",
+"name": "Pet Rock",
+"description": "A Mod about Pets and Rocks",
+"version": "0.0.1",
+"credits": "Created by 2 humans.",
+"logoFile": "/logo.png",
+"mcversion": "1.7.10",
+"url": "http://www.google.com/",
+"updateUrl": "",
+"authorList": [ "Yunus1903", "TheKayneGame" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [ "mod_MinecraftForge" ]
+}
+]

@@ -2,9 +2,9 @@
 {
 "modid": "PetRock",
 "name": "Pet Rock",
-"description": "A Mod about Pets and Rocks",
-"version": "0.0.1",
-"credits": "Thanks to Pahimar's Let's Mod Reboot series. And also Thank to all of our friends.",
+"description": "A Mod about Pets and Rocks --- Coding by Yunus1903, Idea and Textures by TheKayneGame",
+"version": "0.1",
+"credits": "Thanks to our friends at the FTB Teamspeak!",
 "logoFile": "/logo.png",
 "mcversion": "1.7.10",
 "url": "http://www.google.com/",

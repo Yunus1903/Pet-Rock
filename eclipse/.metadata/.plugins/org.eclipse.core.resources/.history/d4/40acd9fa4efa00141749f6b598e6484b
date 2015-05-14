@@ -1,0 +1,16 @@
+package com.YunusKayne.PetRock.creativetab;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class CreativeTab
+{
+	public static final CreativeTabs PetRockTab = new CreativeTabs()
+	{
+		@Override
+		public Item getTabIconItem()
+		{
+			return null;
+		}
+	};
+}

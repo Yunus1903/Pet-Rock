@@ -1,6 +1,9 @@
 package com.YunusKayne.PetRock;
 
 import com.YunusKayne.PetRock.handler.ConfigHandler;
+import com.YunusKayne.PetRock.init.Blocks;
+import com.YunusKayne.PetRock.init.Items;
+import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
@@ -19,7 +22,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * 	
  * 	Use the reference package for classes with a lot of variables!
  * 	
- * 	Rockium --> Petrockium
+ * 	
  */	
 
 public class PetRock
@@ -41,7 +44,9 @@ public class PetRock
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+		Blocks.initBlocks();
+		Items.initItems();
+		Recipes.init();
 	}
 	
 	@Mod.EventHandler

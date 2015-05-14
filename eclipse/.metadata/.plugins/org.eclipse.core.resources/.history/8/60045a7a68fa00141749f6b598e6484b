@@ -1,0 +1,9 @@
+package com.YunusKayne.PetRock;
+
+public class Recipes
+{
+	public static void init()
+	{
+		
+	}
+}
