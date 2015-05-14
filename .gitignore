@@ -14,7 +14,7 @@
 /bin
 /.settings
 /.classpath
-/eclipse/
+/eclipse
 
 # Gradle #
 /.gradle
