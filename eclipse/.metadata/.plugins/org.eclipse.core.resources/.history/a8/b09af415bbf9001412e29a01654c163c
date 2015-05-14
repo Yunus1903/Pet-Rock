@@ -1,0 +1,33 @@
+package com.YunusKayne.PetRock;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid="PetRock", name="Pet Rock", version="1.7.10-0.0.1")
+//STARTING DATE: 13/05/2015
+
+public class PetRock
+{
+	@Mod.Instance("PetRock")
+	public static PetRock instance;
+	
+	@Mod.EventHandler
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		System.out.println("lol");
+	}
+	
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		
+	}
+	
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		
+	}
+}

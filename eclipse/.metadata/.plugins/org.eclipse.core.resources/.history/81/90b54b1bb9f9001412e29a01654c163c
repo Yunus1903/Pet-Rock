@@ -1,0 +1,5 @@
+package com.YunusKayne.PetRock.proxy;
+
+public class IProxy {
+
+}

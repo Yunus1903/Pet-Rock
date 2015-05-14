@@ -1,0 +1,33 @@
+package com.YunusKayne.PetRock.config;
+
+import java.io.File;
+
+import net.minecraftforge.common.config.Configuration;
+
+public class ConfigHandler
+{
+	public static Configuration configuration;
+	
+	public static void init(File configFile)
+	{
+		Configuration configuration = new Configuration(configFile);
+		
+		try
+		{	
+			configuration.load();
+			
+			
+			//This is a config example :)
+			//boolean configValue = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "This is a test config Value").getBoolean(true);
+			
+		}
+		catch (Exception e)
+		{
+			//Log Exception
+		}
+		finally
+		{
+			configuration.save();
+		}
+	}
+}
