@@ -12,13 +12,13 @@ public class Recipes
 				"AAA",
 				"AAA",
 				"AAA",
-			    'A', Items.ingotPetrium);
+			    'A', Items.matterPetrium);
 		
 		//Shapeless Recipe
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.ingotPetrium,9), new ItemStack(Blocks.blockPetrium));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium,9), new ItemStack(Blocks.blockPetrium));
 		
 		
 		//Smelting Recipe
-		GameRegistry.addSmelting(Blocks.orePetrium, new ItemStack(Items.ingotPetrium), 0.5f);
+		GameRegistry.addSmelting(Blocks.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
 	}
 }

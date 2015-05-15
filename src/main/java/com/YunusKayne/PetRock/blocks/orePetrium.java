@@ -3,7 +3,6 @@ package com.YunusKayne.PetRock.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 
 import com.YunusKayne.PetRock.creativetab.Tab;
 import com.YunusKayne.PetRock.reference.Reference;
@@ -18,16 +17,9 @@ public class orePetrium extends Block
 		super(rock);
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
-		this.setBlockTextureName("PetRock:orePetrium");
+		this.setBlockTextureName(Reference.MOD_ID + ":orePetrium");
 		this.setStepSound(soundTypePiston);
 		this.setHardness(3.0F);
 		this.setResistance(5.0F);
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
-	this.blockIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName());
 	}
 }

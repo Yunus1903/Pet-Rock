@@ -1,13 +1,14 @@
 #Blocks
 
 tile.orePetrium.name=Petrium Ore
-tile.blockPetrium.name=Petrium Block
+tile.blockPetrium.name=Block of Petrium
 
 
 #Items
 
-item.ingotPetrium.name=Petrium Ingot
-item.itemLove.name=Love
+item.matterPetrium.name=Petrium
+item.canisterLove.name=Love Canister
+item.canisterEmptyLove.name=Empty Love Canister
 
 
 #Keys

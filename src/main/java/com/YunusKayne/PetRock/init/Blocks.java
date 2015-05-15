@@ -1,5 +1,6 @@
 package com.YunusKayne.PetRock.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import com.YunusKayne.PetRock.blocks.blockPetrium;
