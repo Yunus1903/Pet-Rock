@@ -3,7 +3,6 @@ package com.YunusKayne.PetRock.handler;
 import java.io.File;
 
 import net.minecraftforge.common.config.Configuration;
-import sun.rmi.log.LogHandler;
 
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
@@ -14,6 +13,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class ConfigHandler
 {
 	public static Configuration configuration;
+	
+	public static Boolean EasterEggConfig;
 	
 	public static void init(File configFile)
 	{
@@ -37,8 +38,8 @@ public class ConfigHandler
 	
 	private static void loadConfiguration()
 	{
-		//This is a config example :)
-		//boolean booleanVariable = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "This is a test config Value").getBoolean(true);
+		//This is an Example
+		//EasterEggConfig = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "Easter Eggs").getBoolean(true);
 		
 		if(configuration.hasChanged())
 		{

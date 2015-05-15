@@ -1,8 +1,20 @@
+#Blocks
+
 tile.orePetrium.name=Petrium Ore
 tile.blockPetrium.name=Petrium Block
 
 
+#Items
+
 item.ingotPetrium.name=Petrium Ingot
 
+
+#Keys
+
+keys.PetRock.category=Pet Rock
+keys.PetRock.Hello=Hi!
+
+
+#CreativeTab
 
 itemGroup.PetRock=Pet Rock

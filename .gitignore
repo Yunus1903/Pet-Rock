@@ -15,6 +15,7 @@
 /.settings
 /.classpath
 /eclipse
+/.project
 
 # Gradle #
 /.gradle

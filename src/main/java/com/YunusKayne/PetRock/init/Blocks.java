@@ -11,7 +11,7 @@ public class Blocks
 {
 	//List of blocks
 	public static orePetrium orePetrium = new orePetrium(Material.rock, "orePetrium");
-	public static blockPetrium blockPetrium = new blockPetrium(Material.rock, "orePetrium");
+	public static blockPetrium blockPetrium = new blockPetrium(Material.rock, "blockPetrium");
 	
 	
 	public static void initBlocks()

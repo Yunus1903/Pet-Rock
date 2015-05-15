@@ -1,5 +1,6 @@
 package com.YunusKayne.PetRock;
 
+import com.YunusKayne.PetRock.client.handler.KeyInputEventHandler;
 import com.YunusKayne.PetRock.handler.ConfigHandler;
 import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Items;
@@ -22,7 +23,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * 	
  * 	Use the reference package for classes with a lot of variables!
  * 	
- * 	
+ * 	Make Easter eggs and make an config for it.
  */	
 
 public class PetRock
@@ -44,9 +45,11 @@ public class PetRock
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		proxy.registerKeyBindings();
 		Blocks.initBlocks();
 		Items.initItems();
 		Recipes.init();
+		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
 	}
 	
 	@Mod.EventHandler

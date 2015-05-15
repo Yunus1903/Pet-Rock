@@ -18,9 +18,9 @@ public class blockPetrium extends Block
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setBlockTextureName("PetRock:blockPetrium");
-		this.setStepSound(soundTypeStone);
-		//this.setHardness(2.0F);
-		//this.setResistance(10.0F);
+		this.setStepSound(soundTypeMetal);
+		this.setHardness(5.0F);
+		this.setResistance(10.0F);
 	}
 	
 	@Override

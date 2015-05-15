@@ -19,9 +19,9 @@ public class orePetrium extends Block
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setBlockTextureName("PetRock:orePetrium");
-		this.setStepSound(soundTypeStone);
-		//this.setHardness(2.0F);
-		//this.setResistance(10.0F);
+		this.setStepSound(soundTypePiston);
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
 	}
 	
 	@Override
