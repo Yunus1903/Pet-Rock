@@ -37,7 +37,7 @@ public class PetRock
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		LogHelper.info("This is a fun mod!");
+		LogHelper.info(Reference.MOD_ID + ":This is a fun mod!");
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
 	}
@@ -55,6 +55,6 @@ public class PetRock
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		LogHelper.info("Loading Complete!");
+		LogHelper.info(Reference.MOD_ID + ":Loading Complete!");
 	}
 }
