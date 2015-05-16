@@ -4,6 +4,7 @@ import com.YunusKayne.PetRock.client.handler.KeyInputEventHandler;
 import com.YunusKayne.PetRock.handler.ConfigHandler;
 import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Items;
+import com.YunusKayne.PetRock.init.Liquids;
 import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
@@ -23,7 +24,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * 	
  * 	Use the reference package for classes with a lot of variables!
  * 	
- * 	Make Easter eggs and make an config for it.
+ * 	ToDo List:
+ * 
+ * - WorldGen --> orePetrium 
+ * - Liquids
+ * 
  */	
 
 public class PetRock
@@ -40,15 +45,17 @@ public class PetRock
 		LogHelper.info("This is a fun mod!");
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
+		
+		proxy.registerKeyBindings();
+		Blocks.initBlocks();
+		Items.initItems();
+		Liquids.initLiquids();
+		Recipes.init();
 	}
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		proxy.registerKeyBindings();
-		Blocks.initBlocks();
-		Items.initItems();
-		Recipes.init();
 		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
 	}
 	

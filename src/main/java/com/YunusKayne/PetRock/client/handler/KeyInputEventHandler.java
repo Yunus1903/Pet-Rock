@@ -2,7 +2,6 @@ package com.YunusKayne.PetRock.client.handler;
 
 import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.reference.Key;
-import com.YunusKayne.PetRock.utility.LogHelper;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
