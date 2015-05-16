@@ -1,13 +1,11 @@
 package com.YunusKayne.PetRock.items;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
 import com.YunusKayne.PetRock.creativetab.Tab;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.reference.Reference;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class matterPetrium extends Item
 {
@@ -18,5 +16,6 @@ public class matterPetrium extends Item
 		this.setTextureName(Reference.MOD_ID + ":matterPetrium");
 		
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
+        //OreDictionary.registerOre();
 	}
 }
