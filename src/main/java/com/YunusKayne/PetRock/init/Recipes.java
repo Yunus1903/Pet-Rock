@@ -1,5 +1,7 @@
 package com.YunusKayne.PetRock.init;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -13,6 +15,12 @@ public class Recipes
 				"AAA",
 				"AAA",
 			    'A', Items.matterPetrium);
+		
+		GameRegistry.addRecipe(new ItemStack(Items.canisterEmptyLove),
+				"AAA",
+				"ABA",
+				"AAA",
+				'A', net.minecraft.init.Blocks.glass, 'B', net.minecraft.init.Items.diamond);
 		
 		//Shapeless Recipe
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium,9), new ItemStack(Blocks.blockPetrium));

@@ -13,5 +13,6 @@ public class canisterLove extends Item
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setTextureName(Reference.MOD_ID + ":canisterLove");
+		this.setMaxStackSize(1);
 	}
 }

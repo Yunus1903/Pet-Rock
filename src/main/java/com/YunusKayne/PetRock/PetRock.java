@@ -45,16 +45,17 @@ public class PetRock
 		LogHelper.info("This is a fun mod!");
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
-	}
-	
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event)
-	{
+		
 		proxy.registerKeyBindings();
 		Blocks.initBlocks();
 		Items.initItems();
 		Liquids.initLiquids();
 		Recipes.init();
+	}
+	
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event)
+	{
 		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
 	}
 	
