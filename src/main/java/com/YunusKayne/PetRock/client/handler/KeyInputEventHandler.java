@@ -2,6 +2,8 @@ package com.YunusKayne.PetRock.client.handler;
 
 import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.reference.Key;
+import com.YunusKayne.PetRock.utility.ChatHelper;
+import com.YunusKayne.PetRock.utility.LogHelper;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
@@ -13,7 +15,6 @@ public class KeyInputEventHandler
 		if(Keybindings.Hello.isPressed())
 		{
 			return Key.Hello;
-			//Say "Hi %player%!" in chat
 		}
 		
 		//Make "else if" if you want to add more
@@ -24,6 +25,18 @@ public class KeyInputEventHandler
 	@SubscribeEvent
 	public void handleKeyInputEvent(InputEvent.KeyInputEvent event)
 	{
+		/*
 		//Every time a key gets pressed this will be initialized
+		if(ChatHelper.playername == "Yunus1903")
+		{
+			ChatHelper.ChatMessage("Hi " + ChatHelper.playername + "!");
+		}
+		LogHelper.info(ChatHelper.playername);
+		*/
+	}
+	
+	public static void HelloKey()
+	{
+		//ChatHelper.ChatMessage("lol");
 	}
 }

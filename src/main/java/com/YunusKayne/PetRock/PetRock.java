@@ -9,6 +9,7 @@ import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
+import com.YunusKayne.PetRock.utility.WorldGen;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -16,18 +17,17 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
 //STARTING DATE: 13/05/2015
 
 /*	If you are planning to update then change the version number in Reference class, build.gradle and modmc.info
  * 	
- * 	Use the reference package for classes with a lot of variables!
- * 	
  * 	ToDo List:
  * 
- * - WorldGen --> orePetrium 
  * - Liquids
+ * - Fix ChatHelper class
  * 
  */	
 
@@ -42,15 +42,17 @@ public class PetRock
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		LogHelper.info("This is a fun mod!");
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
+		
+		WorldGen WorldGen = new WorldGen();		
 		
 		proxy.registerKeyBindings();
 		Blocks.initBlocks();
 		Items.initItems();
 		Liquids.initLiquids();
 		Recipes.init();
+		GameRegistry.registerWorldGenerator(WorldGen, 1);
 	}
 	
 	@Mod.EventHandler

@@ -17,6 +17,11 @@ keys.PetRock.category=Pet Rock
 keys.PetRock.Hello=Hi!
 
 
+#InfoLine
+matterPetrium.info1=This is a matter! 
+matterPetrium.info2=Press Shift For More Info.
+
+
 #CreativeTab
 
 itemGroup.PetRock=Pet Rock
