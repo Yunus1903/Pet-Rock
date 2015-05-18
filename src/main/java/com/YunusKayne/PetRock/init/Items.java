@@ -1,6 +1,7 @@
 package com.YunusKayne.PetRock.init;
 
 import net.minecraft.block.material.Material;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
@@ -21,5 +22,8 @@ public class Items
 		GameRegistry.registerItem(matterPetrium, "matterPetrium");
 		GameRegistry.registerItem(canisterLove, "canisterLove");
 		GameRegistry.registerItem(canisterEmptyLove, "canisterEmptyLove");
+		
+		//OreDictionary
+		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
 	}
 }
