@@ -7,6 +7,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ChatHelper
 {	
+	//FIX!
+	
 	private static LivingEvent event;
 	private static EntityPlayer entityplayer = (EntityPlayer) event.entityLiving;
 	
