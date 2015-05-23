@@ -22,7 +22,7 @@ group= "com.YunusKayne.PetRock" // http://maven.apache.org/guides/mini/guide-nam
 archivesBaseName = "PetRock"
 
 minecraft {
-    version = "1.7.10-10.13.2.1291"
+    version = "1.7.10-10.13.3.1408-1.7.10"
     runDir = "eclipse"
 }
 
@@ -32,9 +32,9 @@ dependencies {
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
       
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
+
+    // compile 'com.mod-buildcraft:buildcraft:6.4.15:dev'
+    
 
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
