@@ -1,6 +1,5 @@
 package com.YunusKayne.PetRock.init;
 
-import net.minecraft.block.material.Material;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
@@ -12,9 +11,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Items
 {
 	//List of items
-	public static matterPetrium matterPetrium = new matterPetrium(Material.snow, "matterPetrium");
-	public static canisterLove canisterLove = new canisterLove(Material.glass, "canisterLove");
-	public static canisterEmptyLove canisterEmptyLove = new canisterEmptyLove(Material.glass, "canisterEmptyLove");
+	public static matterPetrium matterPetrium = new matterPetrium("matterPetrium");
+	public static canisterLove canisterLove = new canisterLove("canisterLove", 0, 0, true);
+	public static canisterEmptyLove canisterEmptyLove = new canisterEmptyLove("canisterEmptyLove");
 		
 	public static void initItems()
 	{
