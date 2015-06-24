@@ -8,7 +8,7 @@ import com.YunusKayne.PetRock.reference.Reference;
 
 public class canisterEmptyLove extends Item
 {
-	public canisterEmptyLove(String name)
+	public canisterEmptyLove(Material glass, String name)
 	{
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);

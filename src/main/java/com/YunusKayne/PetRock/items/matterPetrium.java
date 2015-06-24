@@ -15,7 +15,7 @@ import com.YunusKayne.PetRock.utility.ChatHelper;
 
 public class matterPetrium extends Item
 {
-	public matterPetrium(String name)
+	public matterPetrium(Material snow, String name)
 	{
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);

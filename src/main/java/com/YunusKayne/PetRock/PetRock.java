@@ -3,14 +3,13 @@ package com.YunusKayne.PetRock;
 import com.YunusKayne.PetRock.client.handler.KeyInputEventHandler;
 import com.YunusKayne.PetRock.handler.ConfigHandler;
 import com.YunusKayne.PetRock.init.Blocks;
-import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
 import com.YunusKayne.PetRock.init.Recipes;
-import com.YunusKayne.PetRock.init.WorldGen;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
+import com.YunusKayne.PetRock.utility.WorldGen;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -51,7 +50,6 @@ public class PetRock
 		proxy.registerKeyBindings();
 		Blocks.initBlocks();
 		Items.initItems();
-		Entity.initEntity();
 		Liquids.initLiquids();
 		Recipes.init();
 		GameRegistry.registerWorldGenerator(WorldGen, 1);
