@@ -7,6 +7,6 @@ public class ChatHelper
 {		
 	public static void ChatMessage(String string, EntityPlayer player)
 	{
-        player.addChatComponentMessage(new ChatComponentText(string));
+        player.addChatComponentMessage(new ChatComponentText("[Pet Rock]" + string));
     }
 }
