@@ -6,16 +6,19 @@
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.utility.LogHelper"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.client.registry.RenderingRegistry"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderLiving"/>
-<fullyQualifiedTypeName name="com.YunusKayne.PetRock.reference.Reference"/>
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.proxy.ClientProxy"/>
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.Models.ModelPetrock"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
-<fullyQualifiedTypeName name="com.YunusKayne.PetRock.Models.ModelPetRock"/>
 <fullyQualifiedTypeName name="net.minecraftforge.client.IItemRenderer"/>
 <fullyQualifiedTypeName name="net.minecraftforge.client.MinecraftForgeClient"/>
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.PetRock"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.items.itemPetRock"/>
 <fullyQualifiedTypeName name="com.YunusKayne.PetRock.init.Items"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
+<fullyQualifiedTypeName name="com.YunusKayne.PetRock.reference.Reference"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="com.YunusKayne.PetRock.Models.ModelPetRock"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
 </qualifiedTypeNameHistroy>

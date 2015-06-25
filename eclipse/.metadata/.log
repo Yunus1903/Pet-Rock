@@ -578,3 +578,149 @@ org.eclipse.core.internal.resources.ResourceException: A resource exists with a 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-25 02:23:56.472
 !MESSAGE Can't handle %s as source for finding entrypoints.
+!SESSION 2015-06-25 18:51:47.156 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=nl_BE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-25 18:51:54.091
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Gebruiker'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.search 4 0 2015-06-25 19:32:17.414
+!MESSAGE Text Search
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.414
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.414
+!MESSAGE File 'Minecraft/eclipse/.metadata/.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.415
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.415
+!MESSAGE File 'Minecraft/eclipse/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/write.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.415
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.415
+!MESSAGE File 'Minecraft/eclipse/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/write.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.search 4 0 2015-06-25 19:32:17.415
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.415
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.415
+!MESSAGE File 'Minecraft/eclipse/.metadata/.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.416
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.416
+!MESSAGE File 'Minecraft/eclipse/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/write.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.search 4 0 2015-06-25 19:32:17.416
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2015-06-25 19:32:17.416
+!MESSAGE File 'Minecraft/eclipse/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/write.lock' has been skipped, problem while reading: ('Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld').
+!STACK 0
+java.io.IOException: Het proces heeft geen toegang tot het bestand omdat een gedeelte van het bestand door een ander proces is vergrendeld
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$Buffer.fill(FileCharSequenceProvider.java:172)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.fillBuffer(FileCharSequenceProvider.java:385)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getBuffer(FileCharSequenceProvider.java:358)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.charAt(FileCharSequenceProvider.java:414)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.hasBinaryContent(TextSearchVisitor.java:453)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:382)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:165)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
