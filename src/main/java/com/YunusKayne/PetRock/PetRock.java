@@ -1,13 +1,15 @@
 package com.YunusKayne.PetRock;
 
-import com.YunusKayne.PetRock.client.handler.KeyInputEventHandler;
-import com.YunusKayne.PetRock.handler.ConfigHandler;
+import com.YunusKayne.PetRock.client.handler.ConfigHandler;
+import com.YunusKayne.PetRock.client.handler.KeyInputHandler;
+import com.YunusKayne.PetRock.client.settings.KeyBindings;
 import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
 import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.init.WorldGen;
+import com.YunusKayne.PetRock.proxy.ClientProxy;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
@@ -45,13 +47,15 @@ public class PetRock
 	{
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
+		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 		
 		WorldGen WorldGen = new WorldGen();		
 		
-		proxy.registerKeyBindings();
+		KeyBindings.init();
 		Blocks.initBlocks();
 		Items.initItems();
 		Entity.initEntity();
+		ClientProxy.registerRendering();
 		Liquids.initLiquids();
 		Recipes.init();
 		GameRegistry.registerWorldGenerator(WorldGen, 1);
@@ -60,7 +64,7 @@ public class PetRock
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+		
 	}
 	
 	@Mod.EventHandler

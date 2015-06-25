@@ -38,6 +38,6 @@ public class canisterLove extends ItemFood
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
     {
-		list.add(StatCollector.translateToLocal("wip"));
+		list.add(StatCollector.translateToLocal("Info.wip"));
     }
 }

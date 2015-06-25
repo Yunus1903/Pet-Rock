@@ -1,16 +1,23 @@
 package com.YunusKayne.PetRock.proxy;
 
-import com.YunusKayne.PetRock.client.settings.Keybindings;
+import com.YunusKayne.PetRock.PetRock;
+import com.YunusKayne.PetRock.Models.ModelPetRock;
+import com.YunusKayne.PetRock.entity.entityPetRock;
+import com.YunusKayne.PetRock.items.itemPetRock;
+import com.YunusKayne.PetRock.render.RenderItemPetRock;
+import com.YunusKayne.PetRock.render.RenderPetRock;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.IItemRenderer;
+import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy
 {
-	
-	@Override
-	public void registerKeyBindings()
+	public static void registerRendering()
 	{
-		ClientRegistry.registerKeyBinding(Keybindings.Hello);
+		RenderingRegistry.registerEntityRenderingHandler(entityPetRock.class, new RenderPetRock(new ModelPetRock(), 0));
+		MinecraftForgeClient.registerItemRenderer(itemPetRock.itemID, (IItemRenderer)new RenderItemPetRock());
 	}
-
 }
