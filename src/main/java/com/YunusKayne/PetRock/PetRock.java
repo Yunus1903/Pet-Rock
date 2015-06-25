@@ -38,19 +38,19 @@ public class PetRock
 {
 	@Mod.Instance(Reference.MOD_ID)
 	public static PetRock instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.SERVERPROXY)
 	public static IProxy proxy;
-	
+
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
 		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
-		
+
 		WorldGen WorldGen = new WorldGen();		
-		
+
 		KeyBindings.init();
 		Blocks.initBlocks();
 		Items.initItems();
@@ -60,13 +60,13 @@ public class PetRock
 		Recipes.init();
 		GameRegistry.registerWorldGenerator(WorldGen, 1);
 	}
-	
+
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+
 	}
-	
+
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{

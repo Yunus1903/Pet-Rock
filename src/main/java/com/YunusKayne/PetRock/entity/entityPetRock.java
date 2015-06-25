@@ -5,6 +5,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class entityPetRock extends EntityAnimal
@@ -29,7 +30,8 @@ public class entityPetRock extends EntityAnimal
 	
 	protected Item getDropItem()
     {
-        return com.YunusKayne.PetRock.init.Items.itemPetRock;
+		this.entityDropItem(new ItemStack(com.YunusKayne.PetRock.init.Items.itemPetRock), 0.0F);
+        return Item.getItemById(0);
     }
 	
 	@Override
