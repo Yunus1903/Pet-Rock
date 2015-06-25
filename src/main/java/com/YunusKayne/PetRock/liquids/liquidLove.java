@@ -7,7 +7,8 @@ import net.minecraftforge.fluids.Fluid;
 public class liquidLove extends BlockFluidClassic
 {
 
-	public liquidLove(Fluid fluid, Material material) {
+	public liquidLove(Fluid fluid, Material material)
+	{
 		super(fluid, material);
 		// TODO Auto-generated constructor stub
 	}

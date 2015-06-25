@@ -1,0 +1,23 @@
+package com.YunusKayne.PetRock.client.handler;
+
+import com.YunusKayne.PetRock.client.settings.KeyBindings;
+import com.YunusKayne.PetRock.utility.ChatHelper;
+import com.YunusKayne.PetRock.utility.LogHelper;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.InputEvent;
+import net.minecraft.entity.player.EntityPlayer;
+
+public class KeyInputHandler
+{	
+	@SubscribeEvent
+    public void onKeyInput(InputEvent.KeyInputEvent event, EntityPlayer player)
+	{
+        if(KeyBindings.Hello.isPressed())
+        {
+            System.out.println("Hi!");
+            LogHelper.info("hi!");
+            //ChatHelper.ChatMessageString("Hi!" + player.getCommandSenderName(), player);
+        }
+    }
+}

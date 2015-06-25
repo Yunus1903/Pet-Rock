@@ -1,0 +1,13 @@
+package com.YunusKayne.PetRock.proxy;
+
+import com.YunusKayne.PetRock.client.settings.KeyBindings;
+import com.YunusKayne.PetRock.entity.entityPetRock;
+import com.YunusKayne.PetRock.render.RenderPetRock;
+
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+
+public class ClientProxy extends CommonProxy
+{
+	RenderingRegistry.registerEntityRenderingHandler(entityPetRock.class, new RenderPetRock());
+}

@@ -1,12 +1,19 @@
 package com.YunusKayne.PetRock.client.settings;
 
-import net.minecraft.client.settings.KeyBinding;
-
 import org.lwjgl.input.Keyboard;
 
-import com.YunusKayne.PetRock.reference.Names;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import net.minecraft.client.settings.KeyBinding;
 
-public class Keybindings
+public class KeyBindings
 {
-	public static KeyBinding Hello = new KeyBinding(Names.Keys.Hello, Keyboard.KEY_H, Names.Keys.Category);
+    public static KeyBinding Hello;
+
+    public static void init()
+    {
+        Hello = new KeyBinding("key.Hello", Keyboard.KEY_H, "key.Category");
+
+        //Register KeyBindings
+        ClientRegistry.registerKeyBinding(Hello);
+    }
 }

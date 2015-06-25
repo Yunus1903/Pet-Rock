@@ -9,20 +9,28 @@ tile.blockPetrium.name=Block of Petrium
 item.matterPetrium.name=Petrium
 item.canisterLove.name=Love Canister
 item.canisterEmptyLove.name=Empty Love Canister
+item.itemPetRock.name=Pet Rock
 
 
 #Keys
 
-keys.PetRock.category=Pet Rock
-keys.PetRock.Hello=Hi!
+key.Category=Pet Rock
+key.Hello=Hi!
 
 
 #InfoLine
-wip=W.I.P
+Info.wip=W.I.P
 matterPetrium.info1=This is a matter! 
 matterPetrium.info2=Press Shift For More Info.
 
 
-#CreativeTab
+#ChatHelper
+Chat.Hello=Hi!
 
+
+#Entity's
+entity.entityPetRock.name=Pet Rock
+
+
+#CreativeTab
 itemGroup.PetRock=Pet Rock

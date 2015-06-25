@@ -4,7 +4,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 
-import com.YunusKayne.PetRock.handler.ConfigHandler;
+import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.reference.Reference;
 
 import cpw.mods.fml.client.config.GuiConfig;

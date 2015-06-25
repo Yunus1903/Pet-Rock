@@ -1,0 +1,13 @@
+package com.YunusKayne.PetRock.utility;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.StatCollector;
+
+public class ChatHelper
+{		
+	public static void ChatMessage(String UnlocalizedName, EntityPlayer player)
+	{
+        player.addChatComponentMessage(new ChatComponentText("[Pet Rock]" + StatCollector.translateToLocal("ChatHelper." + UnlocalizedName)));
+    }
+}

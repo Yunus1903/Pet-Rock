@@ -1,0 +1,31 @@
+#Blocks
+
+tile.orePetrium.name=Petrium Ore
+tile.blockPetrium.name=Block of Petrium
+
+
+#Items
+
+item.matterPetrium.name=Petrium
+item.canisterLove.name=Love Canister
+item.canisterEmptyLove.name=Empty Love Canister
+
+
+#Keys
+
+key.Category=Pet Rock
+key.Hello=Hi!
+
+
+#InfoLine
+canisterLove.wip=W.I.P
+matterPetrium.info1=This is a matter! 
+matterPetrium.info2=Press Shift For More Info.
+
+
+#ChatHelper
+ChatHelper.Hello=Hi!
+
+
+#CreativeTab
+itemGroup.PetRock=Pet Rock

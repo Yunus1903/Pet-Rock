@@ -1,0 +1,8 @@
+package com.YunusKayne.PetRock.render;
+
+import net.minecraftforge.client.IItemRenderer;
+
+public class RenderItemPetRock implements IItemRenderer
+{
+
+}

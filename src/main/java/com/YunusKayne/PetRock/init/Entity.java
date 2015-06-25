@@ -12,12 +12,9 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class Entity
 {
-	//public static entityPetRock entityPetRock = new entityPetRock(net.minecraft.world.World, "entityPetRock");
-	
 	public static void initEntity()
 	{
-		//EntityRegistry.registerGlobalEntityID(entityPetRock, "entityPetRock", EntityRegistry.findGlobalUniqueEntityId());
-		createEntity(entityPetRock.class, "entityPetRock", 0x0000FF, 0x00FF00);
+		createEntity(entityPetRock.class, "entityPetRock", 0x535353, 0xB8B8B8);
 	}
 	
 	public static void createEntity(Class entityClass, String entityName, int eggPrimaryColor, int eggSecondaryColor)
