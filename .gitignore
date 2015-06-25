@@ -16,11 +16,13 @@
 /.classpath
 /eclipse
 /.project
+/.metadata
 
 # Gradle #
 /.gradle
 /build
 /libs
+/lib
 
 
 # iChuns Gitingnore #
