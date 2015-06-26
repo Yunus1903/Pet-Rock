@@ -7,8 +7,5 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public abstract class CommonProxy implements IProxy
 {
-	public void itemRendering()
-	{
-		
-	}	
+	
 }

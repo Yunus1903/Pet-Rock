@@ -30,7 +30,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 	ToDo List:
  * 
  * - Liquids
- * - Fix ChatHelper class
  * 
  */	
 
