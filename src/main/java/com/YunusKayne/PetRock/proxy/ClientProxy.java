@@ -18,7 +18,6 @@ public class ClientProxy extends CommonProxy
 	public static void registerRendering()
 	{
 		RenderingRegistry.registerEntityRenderingHandler(entityPetRock.class, new RenderPetRock(new ModelPetRock(), 0));
-		MinecraftForgeClient.registerItemRenderer(itemPetRock.itemID, (IItemRenderer)new RenderItemPetRock());
-		
+		MinecraftForgeClient.registerItemRenderer(com.YunusKayne.PetRock.init.Items.itemPetRock, (IItemRenderer)new RenderItemPetRock());
 	}
 }

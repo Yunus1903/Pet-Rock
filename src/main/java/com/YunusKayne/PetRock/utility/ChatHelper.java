@@ -11,11 +11,11 @@ public class ChatHelper
 	
 	public static void ChatMessage(String UnlocalizedName)
 	{
-        player.addChatComponentMessage(new ChatComponentText("[Pet Rock] " + StatCollector.translateToLocal("Chat." + UnlocalizedName)));
+        player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + StatCollector.translateToLocal("Chat." + UnlocalizedName)));
     }
 	
 	public static void ChatMessageString(String string)
 	{
-        player.addChatComponentMessage(new ChatComponentText("[Pet Rock] " + string));
+        player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + string));
     }
 }

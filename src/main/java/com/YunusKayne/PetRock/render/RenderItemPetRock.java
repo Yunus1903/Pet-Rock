@@ -6,7 +6,11 @@ import com.YunusKayne.PetRock.Models.ModelPetRock;
 import com.YunusKayne.PetRock.reference.Reference;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.inventory.GuiContainerCreative;
+import net.minecraft.client.gui.inventory.GuiInventory;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -14,19 +18,19 @@ import net.minecraftforge.client.IItemRenderer;
 public class RenderItemPetRock implements IItemRenderer
 {
 	protected ModelPetRock Model;
-	
+
 	public RenderItemPetRock()
 	{
 		Model = new ModelPetRock();
 	}
-	
+
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type)
 	{
 		switch(type)
 		{
-			case EQUIPPED: return true;
-			default: return false;
+		case EQUIPPED: return true;
+		default: return false;
 		}
 	}
 
@@ -41,21 +45,46 @@ public class RenderItemPetRock implements IItemRenderer
 	{
 		switch(type)
 		{
-			case EQUIPPED:
+		case EQUIPPED:
+		{
+			GL11.glPushMatrix();
+
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/items/itemPetRock.png"));
+
+			float scale = 1.0F;
+
+			GL11.glScalef(scale, scale, scale);
+
+			GL11.glRotatef(0.0F, 1.0F, 0.0F, 0.0F); //x
+			GL11.glRotatef(0.0F, 0.0F, 1.0F, 0.0F); //y
+			GL11.glRotatef(-50.0F, 0.0F, 0.0F, 1.0F); //z
+			
+			boolean isFirstPerson = false;
+			
+			if(data[1] != null && data[1] instanceof EntityPlayer)
 			{
-				GL11.glPushMatrix();
-				
-				Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/items/itemPetRock.png"));
-				
-				float scale = 1.0F;
-				
-				GL11.glScalef(scale, scale, scale);
-				
-				Model.render((Entity)data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
-				
-				GL11.glPopMatrix();
+				if(!((EntityPlayer)data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
+				{
+					GL11.glTranslatef(0.0F, -0.7F, 0.0F);
+				}
+				else
+				{
+					isFirstPerson = true;
+					GL11.glRotatef(0.0F, 1.0F, 0.0F, 0.0F); //x
+					GL11.glRotatef(0.0F, 0.0F, 1.0F, 0.0F); //y
+					GL11.glRotatef(-50.0F, 0.0F, 0.0F, 1.0F); //z
+				}
 			}
-			default: break;
+			else
+			{
+				GL11.glTranslatef(0.0F, -0.7F, 0.0F);
+			}
+
+			Model.render((Entity)data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+
+			GL11.glPopMatrix();
+		}
+		default: break;
 		}
 	}
 }

@@ -31,6 +31,5 @@ public class Items
 		
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
-		
 	}
 }
