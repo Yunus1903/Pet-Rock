@@ -40,6 +40,7 @@ public class ConfigHandler
 	{
 		//This is an Example
 		//EasterEggConfig = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "Easter Eggs").getBoolean(true);
+		//configuration.get(category, key, defaultValue, comment)
 		
 		if(configuration.hasChanged())
 		{

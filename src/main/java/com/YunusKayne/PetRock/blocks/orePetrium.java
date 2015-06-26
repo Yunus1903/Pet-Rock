@@ -17,5 +17,6 @@ public class orePetrium extends Block
 		this.setStepSound(soundTypePiston);
 		this.setHardness(6.0F);
 		this.setResistance(5.0F);
+		
 	}
 }

@@ -8,4 +8,5 @@ public class Reference
 	public static final String CLIENTPROXY = "com.YunusKayne.PetRock.proxy.ClientProxy";
 	public static final String SERVERPROXY = "com.YunusKayne.PetRock.proxy.ServerProxy";
 	public static final String GUIFACTORY = "com.YunusKayne.PetRock.client.gui.GuiFactory";
+	
 }

@@ -13,8 +13,7 @@ public class GuiConfiguration extends GuiConfig
 {
 	public GuiConfiguration(GuiScreen guiScreen)
 	{
-		super(guiScreen,
-				new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
+		super(guiScreen, new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
 				Reference.MOD_ID,
 				false,
 				false,
