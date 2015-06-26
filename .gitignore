@@ -1,3 +1,4 @@
+# Pet Rock #
 *.class
 
 # Package Files #
@@ -23,6 +24,3 @@
 /build
 /libs
 /lib
-
-
-# iChuns Gitingnore #
