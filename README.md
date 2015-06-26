@@ -6,3 +6,4 @@ Authors:
 - Yunus1903:  *Code*
 - JustKayneNL:  *Idea, Textures & Models*
 - manmaed:  *Bug Fixing & Textures*
+- KakesRevenge: *Helper & Mascot :D*
