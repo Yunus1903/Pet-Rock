@@ -21,7 +21,7 @@ public class canisterLove extends ItemFood
 		super(healAmount, saturation, alwaysEdible);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);
-		this.setTextureName(Reference.MOD_ID + ":canisterLove");
+		this.setTextureName(Reference.MOD_ID + ":" + name);
 		this.setMaxStackSize(1);
 	}
 	

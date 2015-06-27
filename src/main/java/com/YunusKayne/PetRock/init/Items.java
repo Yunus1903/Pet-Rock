@@ -6,6 +6,7 @@ import com.YunusKayne.PetRock.Models.ModelPetRock;
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
+import com.YunusKayne.PetRock.items.crushedStone;
 import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.items.matterPetrium;
 import com.YunusKayne.PetRock.render.RenderPetRock;
@@ -21,6 +22,7 @@ public class Items
 	public static canisterLove canisterLove = new canisterLove("canisterLove", 0, 0, true);
 	public static canisterEmptyLove canisterEmptyLove = new canisterEmptyLove("canisterEmptyLove");
 	public static itemPetRock itemPetRock = new itemPetRock("itemPetRock");
+	public static crushedStone crushedStone = new crushedStone("crushedStone");
 		
 	public static void initItems()
 	{
@@ -32,8 +34,10 @@ public class Items
 		{
 			GameRegistry.registerItem(itemPetRock, "itemPetRock");
 		}
+		GameRegistry.registerItem(crushedStone, "crushedStone");
 		
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
+		OreDictionary.registerOre("crushedOre", Items.crushedStone);
 	}
 }

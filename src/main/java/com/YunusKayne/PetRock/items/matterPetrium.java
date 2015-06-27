@@ -19,7 +19,7 @@ public class matterPetrium extends Item
 	{
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);
-		this.setTextureName(Reference.MOD_ID + ":matterPetrium");
+		this.setTextureName(Reference.MOD_ID + ":" + name);
 		
 	}
 	

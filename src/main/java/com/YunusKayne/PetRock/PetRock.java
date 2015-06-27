@@ -8,6 +8,7 @@ import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
 import com.YunusKayne.PetRock.init.Recipes;
+import com.YunusKayne.PetRock.init.Tools;
 import com.YunusKayne.PetRock.init.WorldGen;
 import com.YunusKayne.PetRock.proxy.ClientProxy;
 import com.YunusKayne.PetRock.proxy.IProxy;
@@ -30,7 +31,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 	ToDo List:
  * 
  * - Liquid love
- * - Enchantment on pickaxe --> break cobble --> Crushed stone <-- KakesRevenge
+ * - pickaxe --> break cobble --> Crushed stone <-- KakesRevenge
  * - KakesRevenge <3 PetRock
  * 
  */	
@@ -55,6 +56,7 @@ public class PetRock
 		Keybindings.init();
 		Blocks.initBlocks();
 		Items.initItems();
+		Tools.initTools();
 		Entity.initEntity();
 		ClientProxy.registerRendering();
 		Liquids.initLiquids();
