@@ -2,6 +2,7 @@ package com.YunusKayne.PetRock.client.handler;
 
 import java.io.File;
 
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.config.Configuration;
 
 import com.YunusKayne.PetRock.reference.Reference;
@@ -14,7 +15,7 @@ public class ConfigHandler
 {
 	public static Configuration configuration;
 	
-	public static Boolean EasterEggConfig;
+	public static Boolean useItemPetRock;
 	
 	public static void init(File configFile)
 	{
@@ -37,10 +38,8 @@ public class ConfigHandler
 	}
 	
 	private static void loadConfiguration()
-	{
-		//This is an Example
-		//EasterEggConfig = configuration.get(Configuration.CATEGORY_GENERAL, "configValue", true, "Easter Eggs").getBoolean(true);
-		//configuration.get(category, key, defaultValue, comment)
+	{	
+		useItemPetRock = configuration.get(Configuration.CATEGORY_GENERAL, "useItemPetRock", true, StatCollector.translateToLocal("Config.useItemPetRock")).getBoolean(true);
 		
 		if(configuration.hasChanged())
 		{

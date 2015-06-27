@@ -5,7 +5,7 @@ import org.lwjgl.input.Keyboard;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.client.settings.KeyBinding;
 
-public class KeyBindings
+public class Keybindings //Change to KeyBinding (Github prob)
 {
     public static KeyBinding Hello;
 

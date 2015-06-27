@@ -1,13 +1,14 @@
 package com.YunusKayne.PetRock.client.handler;
 
-import com.YunusKayne.PetRock.client.settings.KeyBindings;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.StatCollector;
+
+import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.utility.ChatHelper;
-import com.YunusKayne.PetRock.utility.LogHelper;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
-import net.minecraft.entity.player.EntityPlayer;
 
 public class KeyInputHandler
 {	
@@ -15,9 +16,9 @@ public class KeyInputHandler
     public void onKeyInput(InputEvent.KeyInputEvent event)
 	{
 		EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
-        if(KeyBindings.Hello.isPressed())
+        if(Keybindings.Hello.isPressed())
         {
-            ChatHelper.ChatMessageString("Hi " + player.getCommandSenderName() + "!");
+            ChatHelper.ChatMessageString(StatCollector.translateToLocal("Chat.Hello") + " " + player.getCommandSenderName() + "!");
         }
     }
 }

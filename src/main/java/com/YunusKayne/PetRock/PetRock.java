@@ -2,14 +2,13 @@ package com.YunusKayne.PetRock;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.client.handler.KeyInputHandler;
-import com.YunusKayne.PetRock.client.settings.KeyBindings;
+import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
 import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.init.WorldGen;
-import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.proxy.ClientProxy;
 import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
@@ -22,7 +21,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
 //STARTING DATE: 13/05/2015
@@ -31,8 +29,9 @@ import net.minecraft.item.Item;
  * 	
  * 	ToDo List:
  * 
- * - Liquids
- * - Make crusher (cobblestone --> crushed stone)
+ * - Liquid love
+ * - Enchantment on pickaxe --> break cobble --> Crushed stone <-- KakesRevenge
+ * - KakesRevenge <3 PetRock
  * 
  */	
 
@@ -53,7 +52,7 @@ public class PetRock
 
 		WorldGen WorldGen = new WorldGen();		
 
-		KeyBindings.init();
+		Keybindings.init();
 		Blocks.initBlocks();
 		Items.initItems();
 		Entity.initEntity();

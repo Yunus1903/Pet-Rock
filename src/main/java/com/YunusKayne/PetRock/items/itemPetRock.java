@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.YunusKayne.PetRock.creativetab.Tab;
 import com.YunusKayne.PetRock.entity.entityPetRock;
+import com.YunusKayne.PetRock.utility.ChatHelper;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,25 +25,25 @@ public class itemPetRock extends Item
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
+	public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int x, int y, int z, int par7, float par8, float par9, float par10)
 	{
-		list.add(StatCollector.translateToLocal("Info.wip"));
-	}
-
-	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player)
-	{
-		if (!player.capabilities.isCreativeMode)
-		{
-			--item.stackSize;
-			LogHelper.info("if thing");
-		}	
-
 		if (!world.isRemote)
 		{
-			world.spawnEntityInWorld(new entityPetRock(world));
-			LogHelper.info("Spawned");
+			if (!player.capabilities.isCreativeMode)
+			{
+				--item.stackSize;
+			}
+			EntityPlayer p = world.getClosestPlayer(x, y, z, 100);
+			float yaw = p.rotationYaw;
+			float pitch = p.rotationPitch;
+			
+			entityPetRock PetRock = new entityPetRock(world);
+			PetRock.setLocationAndAngles(x, y, z, yaw, pitch);
+			
+			world.spawnEntityInWorld(PetRock);
+			ChatHelper.ChatMessage("PetRockTime");
+			return true;
 		}
-
-		return item;
+		return false;
 	}
 }

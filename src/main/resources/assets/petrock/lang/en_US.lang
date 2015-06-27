@@ -1,11 +1,9 @@
 #Blocks
-
 tile.orePetrium.name=Petrium Ore
 tile.blockPetrium.name=Block of Petrium
 
 
 #Items
-
 item.matterPetrium.name=Petrium
 item.canisterLove.name=Love Canister
 item.canisterEmptyLove.name=Empty Love Canister
@@ -13,7 +11,6 @@ item.itemPetRock.name=Pet Rock
 
 
 #Keys
-
 key.Category=Pet Rock
 key.Hello=Hi!
 
@@ -24,7 +21,13 @@ matterPetrium.info1=This is a matter!
 matterPetrium.info2=Press Shift For More Info.
 
 
+#Configuration
+Config.useItemPetRock=Use the Pet Rock Spawn Item. (If it is false then it will use the default spawn egg.)
+
+
 #ChatHelper
+Chat.Hello=Hi
+Chat.PetRockTime=It's Pet Rock Time!
 
 
 #Entity's

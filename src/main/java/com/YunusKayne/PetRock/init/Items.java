@@ -3,6 +3,7 @@ package com.YunusKayne.PetRock.init;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.Models.ModelPetRock;
+import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
 import com.YunusKayne.PetRock.items.itemPetRock;
@@ -27,7 +28,10 @@ public class Items
 		GameRegistry.registerItem(matterPetrium, "matterPetrium");
 		GameRegistry.registerItem(canisterLove, "canisterLove");
 		GameRegistry.registerItem(canisterEmptyLove, "canisterEmptyLove");
-		GameRegistry.registerItem(itemPetRock, "itemPetRock");
+		if(ConfigHandler.useItemPetRock)
+		{
+			GameRegistry.registerItem(itemPetRock, "itemPetRock");
+		}
 		
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);

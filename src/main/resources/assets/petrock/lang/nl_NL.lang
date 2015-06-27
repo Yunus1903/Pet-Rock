@@ -1,0 +1,38 @@
+#Blocks
+tile.orePetrium.name=Petrium Erts
+tile.blockPetrium.name=Petrium Blok
+
+
+#Items
+item.matterPetrium.name=Petrium
+item.canisterLove.name=liefde's Bus
+item.canisterEmptyLove.name=Lege liefde's Bus
+item.itemPetRock.name=Pet Rock
+
+
+#Keys
+key.Category=Pet Rock
+key.Hello=Hallo!
+
+
+#InfoLine
+Info.wip=W.I.P
+matterPetrium.info1=Dit is een Materie! 
+matterPetrium.info2=Druk Op Shift Voor Meer Info.
+
+
+#Configuration
+Config.useItemPetRock=Gebruik de Pet Rock zelf. (Als het false is dan gaat het de standaard spawn ei gebruiken.)
+
+
+#ChatHelper
+Chat.Hello=Hallo
+Chat.PetRockTime=Het Is Pet Rock Tijd!
+
+
+#Entity's
+entity.entityPetRock.name=Pet Rock
+
+
+#CreativeTab
+itemGroup.PetRock=Pet Rock
