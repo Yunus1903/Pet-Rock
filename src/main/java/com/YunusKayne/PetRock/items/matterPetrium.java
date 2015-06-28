@@ -13,6 +13,9 @@ import com.YunusKayne.PetRock.creativetab.Tab;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.ChatHelper;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class matterPetrium extends Item
 {
 	public matterPetrium(String name)
@@ -24,15 +27,9 @@ public class matterPetrium extends Item
 	}
 	
 	@Override
+	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
 	{
-        if(GuiScreen.isShiftKeyDown())
-        {
-            list.add(StatCollector.translateToLocal("matterPetrium.info1"));
-        }
-        else
-        {
-        	list.add(StatCollector.translateToLocal("matterPetrium.info2"));
-        }
+		list.add(StatCollector.translateToLocal("matterPetrium.info1"));
     }
 }

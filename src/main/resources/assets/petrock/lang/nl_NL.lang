@@ -9,6 +9,7 @@ item.canisterLove.name=Liefde's Bus
 item.canisterEmptyLove.name=Lege Liefde's Bus
 item.itemPetRock.name=Pet Rock
 item.crushedStone.name=Verpletterde Steen
+item.PetriumPickaxe.name=Petrium Houweel
 
 
 #Keys
@@ -18,8 +19,12 @@ key.Hello=Hallo!
 
 #InfoLine
 Info.wip=W.I.P
-matterPetrium.info1=Dit is een Materie! 
-matterPetrium.info2=Druk Op Shift Voor Meer Info.
+matterPetrium.info1=Dit is een Materie!
+PetriumPickaxe.info1=Speciale Vaardigheden:
+PetriumPickaxe.info2=- Verpletteren
+PetriumPickaxe.info3=- Zijden Streling Op Glas
+PetriumPickaxe.info4=Resterende Toepassingen:
+
 
 
 #Configuration

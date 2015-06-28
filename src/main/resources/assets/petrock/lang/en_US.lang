@@ -9,6 +9,7 @@ item.canisterLove.name=Love Canister
 item.canisterEmptyLove.name=Empty Love Canister
 item.itemPetRock.name=Pet Rock
 item.crushedStone.name=Crushed Stone
+item.PetriumPickaxe.name=Petrium Pickaxe
 
 
 #Keys
@@ -19,7 +20,10 @@ key.Hello=Hi!
 #InfoLine
 Info.wip=W.I.P
 matterPetrium.info1=This is a matter! 
-matterPetrium.info2=Press Shift For More Info.
+PetriumPickaxe.info1=Special Abilities:
+PetriumPickaxe.info2=- Crushing
+PetriumPickaxe.info3=- Silk touching Glass
+PetriumPickaxe.info4=Uses Remaining:
 
 
 #Configuration

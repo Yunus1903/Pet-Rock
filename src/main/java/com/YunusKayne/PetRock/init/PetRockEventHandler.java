@@ -117,7 +117,7 @@ public class PetRockEventHandler
 		else if(PetriumPick && isBlockEqual())
 		{
 			//LogHelper.info(Output[current]);
-			event.drops.add(itemOutput[current]);
+			event.drops.add(PetRockEventHandler.o[current]);
 			LogHelper.chat("---Dropped---");
 			current = 0;
 			a++;
