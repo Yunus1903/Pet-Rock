@@ -1,7 +1,7 @@
 package com.YunusKayne.PetRock.proxy;
 
 import com.YunusKayne.PetRock.PetRock;
-import com.YunusKayne.PetRock.Models.ModelPetRock;
+import com.YunusKayne.PetRock.client.models.ModelPetRock;
 import com.YunusKayne.PetRock.entity.entityPetRock;
 import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.render.RenderItemPetRock;

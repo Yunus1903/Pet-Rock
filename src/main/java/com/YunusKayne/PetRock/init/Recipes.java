@@ -1,7 +1,11 @@
 package com.YunusKayne.PetRock.init;
 
-import net.minecraft.block.Block;
+import akka.actor.FSM.Event;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Recipes
@@ -9,7 +13,7 @@ public class Recipes
 	public static void init()
 	{
 		//Shaped Recipe
-		GameRegistry.addRecipe(new ItemStack(Blocks.blockPetrium, 1),
+		GameRegistry.addRecipe(new ItemStack(BlocksHandler.blockPetrium, 1),
 				"AAA",
 				"AAA",
 				"AAA",
@@ -26,16 +30,16 @@ public class Recipes
 				"AA",
 				'A', Items.crushedStone);
 		
-		/*
+		
 		GameRegistry.addRecipe(new ItemStack(Tools.PetriumPickaxe, 1),
 				"AAA",
 				" B ",
 				" B ",
-				'A', Blocks.blockPetrium, 'B', net.minecraft.init.Items.stick);
-		*/
+				'A', BlocksHandler.blockPetrium, 'B', net.minecraft.init.Items.stick);
+		
 		
 		//Shapeless Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium, 9), new ItemStack(Blocks.blockPetrium));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium, 9), new ItemStack(BlocksHandler.blockPetrium));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.canisterEmptyLove, 1), new ItemStack(Items.canisterLove));
 		
 			//Extra Random Recipes
@@ -71,6 +75,11 @@ public class Recipes
 		
 		
 		//Smelting Recipe
-		GameRegistry.addSmelting(Blocks.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
+		GameRegistry.addSmelting(BlocksHandler.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
+		
+		//Petrium Pickaxe Recipe
+		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
+		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Items.canisterLove),  Blocks.glass);
+		
 	}
 }

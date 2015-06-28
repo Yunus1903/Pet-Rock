@@ -2,7 +2,7 @@ package com.YunusKayne.PetRock.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.YunusKayne.PetRock.Models.ModelPetRock;
+import com.YunusKayne.PetRock.client.models.ModelPetRock;
 import com.YunusKayne.PetRock.reference.Reference;
 
 import net.minecraft.client.Minecraft;

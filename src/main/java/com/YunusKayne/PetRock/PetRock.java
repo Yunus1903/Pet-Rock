@@ -1,12 +1,15 @@
 package com.YunusKayne.PetRock;
 
+import net.minecraftforge.common.MinecraftForge;
+
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.client.handler.KeyInputHandler;
 import com.YunusKayne.PetRock.client.settings.Keybindings;
-import com.YunusKayne.PetRock.init.Blocks;
+import com.YunusKayne.PetRock.init.BlocksHandler;
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
+import com.YunusKayne.PetRock.init.PetRockEventHandler;
 import com.YunusKayne.PetRock.init.Recipes;
 import com.YunusKayne.PetRock.init.Tools;
 import com.YunusKayne.PetRock.init.WorldGen;
@@ -32,8 +35,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 
  * - Liquid love
  * - pickaxe --> break cobble --> Crushed stone <-- KakesRevenge
- * - KakesRevenge <3 PetRock
- * 
+ *  - find kakes in czech republic and kill him
  */	
 
 public class PetRock
@@ -50,11 +52,13 @@ public class PetRock
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
 		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
+		FMLCommonHandler.instance().bus().register(new PetRockEventHandler());
+		MinecraftForge.EVENT_BUS.register(new PetRockEventHandler());
 
 		WorldGen WorldGen = new WorldGen();		
 
 		Keybindings.init();
-		Blocks.initBlocks();
+		BlocksHandler.initBlocks();
 		Items.initItems();
 		Tools.initTools();
 		Entity.initEntity();
