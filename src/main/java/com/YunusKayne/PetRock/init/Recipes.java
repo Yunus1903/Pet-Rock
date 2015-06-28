@@ -79,7 +79,7 @@ public class Recipes
 		
 		//Petrium Pickaxe Recipe
 		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
-		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Items.canisterLove),  Blocks.glass);
+		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Items.matterPetrium),  Blocks.glass);
 		
 	}
 }

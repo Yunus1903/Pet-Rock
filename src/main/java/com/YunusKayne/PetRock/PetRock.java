@@ -34,8 +34,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 	ToDo List:
  * 
  * - Liquid love
- * - pickaxe --> break cobble --> Crushed stone <-- KakesRevenge
- *  - find kakes in czech republic and kill him
+ * - find kakes in czech republic and kill him
  */	
 
 public class PetRock

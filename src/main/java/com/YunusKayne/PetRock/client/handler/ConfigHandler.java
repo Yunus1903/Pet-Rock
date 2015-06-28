@@ -16,6 +16,7 @@ public class ConfigHandler
 	public static Configuration configuration;
 	
 	public static Boolean useItemPetRock;
+	public static Boolean debugMode;
 	
 	public static void init(File configFile)
 	{
@@ -39,7 +40,8 @@ public class ConfigHandler
 	
 	private static void loadConfiguration()
 	{	
-		useItemPetRock = configuration.get(Configuration.CATEGORY_GENERAL, "useItemPetRock", true, StatCollector.translateToLocal("Config.useItemPetRock")).getBoolean(true);
+		useItemPetRock = configuration.get(Configuration.CATEGORY_GENERAL, "Use itemPetRock", true, StatCollector.translateToLocal("Config.useItemPetRock")).getBoolean(true);
+		debugMode = configuration.get(Configuration.CATEGORY_GENERAL, "Debug Mode", false, StatCollector.translateToLocal("Config.debugMode")).getBoolean(false);
 		
 		if(configuration.hasChanged())
 		{
