@@ -35,6 +35,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 
  * - Liquid love
  * - find kakes in czech republic and kill him
+ * - When youre not looking the Pet Rock will move slowly
  */	
 
 public class PetRock
@@ -70,12 +71,13 @@ public class PetRock
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-
+		
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
+		LogHelper.error("manmaed is Weird!");
 		LogHelper.info("Loading Complete!");
 	}
 }

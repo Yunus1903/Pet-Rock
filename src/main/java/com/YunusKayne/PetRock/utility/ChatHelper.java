@@ -8,14 +8,20 @@ import net.minecraft.util.StatCollector;
 public class ChatHelper
 {		
 	private static EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
-	
+
 	public static void ChatMessage(String UnlocalizedName)
 	{
-        player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + StatCollector.translateToLocal("Chat." + UnlocalizedName)));
-    }
-	
+		player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + StatCollector.translateToLocal("Chat." + UnlocalizedName)));
+	}
+
 	public static void ChatMessageString(String string)
 	{
-        player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + string));
-    }
+		player.addChatComponentMessage(new ChatComponentText("§B[Pet Rock]§f " + string));
+	}
+
+	public static void Debug(Object object)
+	{
+		ChatHelper.ChatMessageString("§cDebug:§f " + (String) object);
+		LogHelper.debug(object);
+	}
 }

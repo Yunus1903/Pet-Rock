@@ -1,11 +1,7 @@
 package com.YunusKayne.PetRock.init;
 
-import akka.actor.FSM.Event;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Recipes
@@ -23,9 +19,9 @@ public class Recipes
 				"AAA",
 				"ABA",
 				"AAA",
-				'A', net.minecraft.init.Blocks.glass, 'B', net.minecraft.init.Items.diamond);
+				'A', Blocks.glass, 'B', net.minecraft.init.Items.diamond);
 		
-		GameRegistry.addRecipe(new ItemStack(net.minecraft.init.Blocks.cobblestone, 1),
+		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1),
 				"AA",
 				"AA",
 				'A', Items.crushedStone);
@@ -78,8 +74,7 @@ public class Recipes
 		GameRegistry.addSmelting(BlocksHandler.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
 		
 		//Petrium Pickaxe Recipe
-		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
-		PetRockEventHandler.addPetriumPickaxeRecipe(new ItemStack(Items.matterPetrium),  Blocks.glass);
-		
+		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
+		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Items.matterPetrium),  Blocks.glass);
 	}
 }

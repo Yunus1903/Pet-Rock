@@ -6,6 +6,7 @@ import net.minecraft.util.StatCollector;
 
 import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.init.PetRockEventHandler;
+import com.YunusKayne.PetRock.init.RecipeHandler;
 import com.YunusKayne.PetRock.utility.ChatHelper;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
@@ -22,13 +23,30 @@ public class KeyInputHandler
 		if(Keybindings.Hello.isPressed())
 		{
 			ChatHelper.ChatMessageString(StatCollector.translateToLocal("Chat.Hello") + " " + player.getCommandSenderName() + "!");
+			if(Author())
+			{
+				ChatHelper.ChatMessageString(":O Your one of the Authors of this mod! :O");
+			}
 		}
 		else if(Keybindings.Debug.isPressed())
 		{
-			//LogHelper.chat(PetRockEventHandler.Event.block.equals(PetRockEventHandler.p[PetRockEventHandler.current]));
-			//LogHelper.debug(PetRockEventHandler.Event.block.equals(PetRockEventHandler.p[PetRockEventHandler.current]));
-			LogHelper.chat(PetRockEventHandler.current + " = " + PetRockEventHandler.p[PetRockEventHandler.current]);
-			LogHelper.debug(PetRockEventHandler.current + " = " + PetRockEventHandler.p[PetRockEventHandler.current]);
+			ChatHelper.Debug("----------------------------------------------------");
+			ChatHelper.Debug(RecipeHandler.current + " = " + RecipeHandler.p[RecipeHandler.current]);
+			ChatHelper.Debug("Current Item: " + PetRockEventHandler.CurrentItem);
+			if(RecipeHandler.PetriumPick && RecipeHandler.isBlockEqual()) ChatHelper.Debug("aa(): " + true);
+			else ChatHelper.Debug("aa(): " + false);
 		}
+	}
+	
+	private static boolean Author()
+	{
+		EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
+		
+		if(player.getCommandSenderName().equals("Yunus1903")) return true;
+		if(player.getCommandSenderName().equals("KakesRevengeCZ")) return true;
+		if(player.getCommandSenderName().equals("TheKayneGame")) return true;
+		if(player.getCommandSenderName().equals("manmaed")) return true;
+		
+		return false;	
 	}
 }

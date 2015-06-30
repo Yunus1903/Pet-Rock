@@ -52,10 +52,5 @@ public class LogHelper
     {
         log(Level.WARN, object);
     }
-    
-    public static void chat(Object object)
-    {
-        ChatHelper.ChatMessageString("§cDebug:§f " + (String) object);
-    }
 }
 

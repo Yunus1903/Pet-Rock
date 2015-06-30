@@ -14,6 +14,7 @@ public class entityPetRock extends EntityAnimal
 	{
 		super(world);
 		this.setSize(0.8F, 0.5F);
+		this.isImmuneToFire = true;
 	}
 
 	public boolean isAIEnabled()
