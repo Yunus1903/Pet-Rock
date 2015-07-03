@@ -2,16 +2,15 @@
 {
 "modid": "PetRock",
 "name": "Pet Rock",
-"description": "A Mod about Pets and Rocks --- Coding by Yunus1903, Idea and Textures by TheKayneGame, Textures and Fixing by manmaed and some more Coding by KakesRevenge!",
-"version": "0.1",
-"mcversion": "1.7.10",
+"description": "A Mod about PetRocks --- Coding by Yunus1903, Idea and Textures by TheKayneGame, Textures and Fixing by manmaed and some more Coding by KakesRevenge!",
+"version": "${version}",
+"mcversion": "${mcversion}",
 "credits": "Thanks to Notch for this great game!",
 "logoFile": "",
-"mcversion": "1.7.10",
 "url": "https://github.com/Yunus1903/Pet-Rock",
 "updateUrl": "https://github.com/Yunus1903/Pet-Rock",
 "authorList": [ "Yunus1903", "KakesRevenge", "TheKayneGame", "manmaed" ],
-"parent":"",
+"parent": "",
 "screenshots": [],
 "dependencies": [ "mod_MinecraftForge" ]
 }

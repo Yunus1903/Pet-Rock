@@ -1,9 +1,7 @@
 package com.YunusKayne.PetRock;
 
-import net.minecraftforge.common.MinecraftForge;
-
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
-import com.YunusKayne.PetRock.client.handler.KeyInputHandler;
+import com.YunusKayne.PetRock.client.render.RenderItemPetRock;
 import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.init.BlocksHandler;
 import com.YunusKayne.PetRock.init.Entity;
@@ -18,13 +16,20 @@ import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.World;
+import net.minecraftforge.client.IItemRenderer;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
 //STARTING DATE: 13/05/2015
@@ -34,8 +39,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * 	ToDo List:
  * 
  * - Liquid love
- * - find kakes in czech republic and kill him
  * - When youre not looking the Pet Rock will move slowly
+ * - Never use IntelJ
  */	
 
 public class PetRock
@@ -45,27 +50,35 @@ public class PetRock
 
 	@SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.SERVERPROXY)
 	public static IProxy proxy;
-
+	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		boolean isClientSide = event.getSide().isClient();
+		boolean isServerSide = event.getSide().isServer();
+		
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
+		
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
-		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 		FMLCommonHandler.instance().bus().register(new PetRockEventHandler());
 		MinecraftForge.EVENT_BUS.register(new PetRockEventHandler());
-
+		
 		WorldGen WorldGen = new WorldGen();		
-
-		Keybindings.init();
+		
 		BlocksHandler.initBlocks();
 		Items.initItems();
 		Tools.initTools();
 		Entity.initEntity();
-		ClientProxy.registerRendering();
+		if(isClientSide)
+		{
+			ClientProxy.registerKeyInput();
+			ClientProxy.registerRendering();
+		}
 		Liquids.initLiquids();
 		Recipes.init();
 		GameRegistry.registerWorldGenerator(WorldGen, 1);
+		
+		FMLInterModComms.sendMessage("Waila", "register", "com.YunusKayne.PetRock.API.Waila.Waila.onCall");
 	}
 
 	@Mod.EventHandler
@@ -77,7 +90,6 @@ public class PetRock
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		LogHelper.error("manmaed is Weird!");
 		LogHelper.info("Loading Complete!");
 	}
 }

@@ -4,12 +4,12 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.client.models.ModelPetRock;
+import com.YunusKayne.PetRock.client.render.RenderPetRock;
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
 import com.YunusKayne.PetRock.items.crushedStone;
 import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.items.matterPetrium;
-import com.YunusKayne.PetRock.render.RenderPetRock;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -35,6 +35,6 @@ public class Items
 		
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
-		OreDictionary.registerOre("crushedOre", Items.crushedStone);
+		OreDictionary.registerOre("crushedStone", Items.crushedStone);
 	}
 }

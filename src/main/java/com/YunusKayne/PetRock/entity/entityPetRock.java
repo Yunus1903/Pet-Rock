@@ -1,8 +1,12 @@
 package com.YunusKayne.PetRock.entity;
 
+import com.YunusKayne.PetRock.init.Entity;
+import com.YunusKayne.PetRock.utility.ChatHelper;
+
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,34 +14,125 @@ import net.minecraft.world.World;
 
 public class entityPetRock extends EntityAnimal
 {
+	public int inLove;
+
+	public static String customNameTag = "";
+
+	private float Health = 2.0F;
+
 	public entityPetRock(World world)
 	{
 		super(world);
 		this.setSize(0.8F, 0.5F);
 		this.isImmuneToFire = true;
+		this.setHealth(Health);
+		if(!customNameTag.isEmpty()) this.setCustomNameTag(customNameTag);
+		//ChatHelper.ChatMessage("PetRockTime");
 	}
 
-	public boolean isAIEnabled()
+	@Override
+	protected boolean isAIEnabled()
 	{
 		return false;
 	}
-	
+
+	@Override
+	protected boolean canDespawn()
+	{
+		return false;
+	}
+
+	@Override
+	public boolean canBreatheUnderwater()
+	{
+		return true;
+	}
+
+	@Override
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0D); //Health
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.0D); //Movement Speed
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(30.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.0D);
 	}
-	
+
 	protected Item getDropItem()
-    {
+	{
 		this.entityDropItem(new ItemStack(com.YunusKayne.PetRock.init.Items.itemPetRock), 0.0F);
-        return Item.getItemById(0);
-    }
-	
+		return Item.getItemById(0);
+	}
+
 	@Override
 	public EntityAgeable createChild(EntityAgeable p_90011_1_)
 	{
 		return new entityPetRock(worldObj);
 	}
+
+	@Override
+	public boolean isBreedingItem(ItemStack item)
+	{
+		return item.getItem() == com.YunusKayne.PetRock.init.Items.canisterLove;
+	}
+
+	@Override
+	public boolean interact(EntityPlayer player)
+	{
+		ItemStack itemstack = player.inventory.getCurrentItem();
+
+		if (itemstack != null && this.isBreedingItem(itemstack) && this.inLove <= 0)
+		{
+			if (!player.capabilities.isCreativeMode)
+			{
+				--itemstack.stackSize;
+				player.inventory.addItemStackToInventory(new ItemStack(com.YunusKayne.PetRock.init.Items.canisterEmptyLove));
+				this.setHealth(Health + 2.0F);
+
+				if (itemstack.stackSize <= 0)
+				{
+					player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) null);
+				}
+			}
+
+			this.func_146082_f(player);
+			return true;
+		}
+		else
+		{
+			return super.interact(player);
+		}
+
+	}
+
+	@Override
+	public void onLivingUpdate()
+	{
+		super.onLivingUpdate();
+
+		if (this.inLove > 0)
+		{
+			--this.inLove;
+			String s = "heart";
+
+			if (this.inLove % 10 == 0)
+			{
+				double d0 = this.rand.nextGaussian() * 0.02D;
+				double d1 = this.rand.nextGaussian() * 0.02D;
+				double d2 = this.rand.nextGaussian() * 0.02D;
+				this.worldObj.spawnParticle(s, this.posX + (double)(this.rand.nextFloat() * this.width * 2.0F) - (double)this.width, this.posY + 0.5D + (double)(this.rand.nextFloat() * this.height), this.posZ + (double)(this.rand.nextFloat() * this.width * 2.0F) - (double)this.width, d0, d1, d2);
+			}
+		}
+	}
+
+	@Override
+	public boolean isInLove()
+	{
+		return this.inLove > 0;
+	}
+
+	@Override
+	public void resetInLove()
+	{
+		this.inLove = 0;
+	}
+
 }

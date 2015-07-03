@@ -26,6 +26,10 @@ PetriumPickaxe.info3=- Silk touching Glass
 PetriumPickaxe.info4=Uses Remaining:
 
 
+#WAILA
+Waila.Stone.info1=Use the Petrium Pickaxe to get Crushed Stone.
+
+
 #Configuration
 Config.useItemPetRock=Use the Pet Rock Spawn Item. (If it is false then it will use the default spawn egg.)
 

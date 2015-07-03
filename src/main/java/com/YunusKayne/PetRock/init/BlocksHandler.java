@@ -22,6 +22,5 @@ public class BlocksHandler
 		
 		//OreDictionary
 		OreDictionary.registerOre("orePetrium", BlocksHandler.orePetrium);
-		
 	}
 }

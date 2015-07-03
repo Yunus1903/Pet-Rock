@@ -1,11 +1,10 @@
-package com.YunusKayne.PetRock.init;
+package com.YunusKayne.PetRock.utility;
+
+import com.YunusKayne.PetRock.init.PetRockEventHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import com.YunusKayne.PetRock.utility.ChatHelper;
-import com.YunusKayne.PetRock.utility.LogHelper;
 
 public class RecipeHandler
 {

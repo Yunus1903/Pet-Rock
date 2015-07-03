@@ -1,4 +1,4 @@
-package com.YunusKayne.PetRock.render;
+package com.YunusKayne.PetRock.client.render;
 
 import com.YunusKayne.PetRock.entity.entityPetRock;
 import com.YunusKayne.PetRock.reference.Reference;

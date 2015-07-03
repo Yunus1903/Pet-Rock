@@ -8,8 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 import com.YunusKayne.PetRock.utility.ChatHelper;
+import com.YunusKayne.PetRock.utility.RecipeHandler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class PetRockEventHandler
 {		
@@ -44,7 +47,7 @@ public class PetRockEventHandler
 		else if(!RecipeHandler.PetriumPick || !RecipeHandler.isBlockEqual()) {ChatHelper.Debug("NOT WORKING! " + RecipeHandler.current); RecipeHandler.current = 0;}
 		ChatHelper.Debug("Initialized");
 
-		if(event.block.equals(Blocks.stone) || event.block.equals(Blocks.cobblestone))
+		if(event.block.equals(Blocks.stone))
 		{
 			for(int x = event.drops.size() - 1; x >= 0; x--)
 			{

@@ -2,6 +2,9 @@ package com.YunusKayne.PetRock.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+
+import com.YunusKayne.PetRock.utility.RecipeHandler;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Recipes
@@ -75,6 +78,6 @@ public class Recipes
 		
 		//Petrium Pickaxe Recipe
 		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
-		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Items.matterPetrium),  Blocks.glass);
+		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass),  Blocks.glass);
 	}
 }

@@ -2,10 +2,13 @@ package com.YunusKayne.PetRock.items;
 
 import java.util.List;
 
+import com.YunusKayne.PetRock.PetRock;
 import com.YunusKayne.PetRock.creativetab.Tab;
 import com.YunusKayne.PetRock.entity.entityPetRock;
+import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.utility.ChatHelper;
 import com.YunusKayne.PetRock.utility.LogHelper;
+import com.YunusKayne.PetRock.utility.NBTHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityEgg;
@@ -21,12 +24,12 @@ public class itemPetRock extends Item
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setMaxStackSize(1);
-		this.setFull3D();	
+		this.setFull3D();
 	}
 
 	@Override
 	public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int x, int y, int z, int side, float xOfset, float yOfset, float zOfset)
-	{
+	{	
 		if (!world.isRemote)
 		{
 			if (!player.capabilities.isCreativeMode)
@@ -37,11 +40,23 @@ public class itemPetRock extends Item
 			float yaw = p.rotationYaw;
 			float pitch = p.rotationPitch;
 			
-			entityPetRock PetRock = new entityPetRock(world);
-			PetRock.setLocationAndAngles(x, y, z, yaw, pitch);
+			entityPetRock entityPetRock = new entityPetRock(world);
+			entityPetRock.setLocationAndAngles(x, y+1.5, z, yaw, pitch);
 			
-			world.spawnEntityInWorld(PetRock);
-			ChatHelper.ChatMessage("PetRockTime");
+			com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
+			if(item.getDisplayName() != this.getItemStackDisplayName(item))
+			{
+				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = item.getDisplayName();
+				ChatHelper.Debug(item.getDisplayName()  + " =lol= " +  StatCollector.translateToLocal("item.itemPetRock.name"));
+				world.spawnEntityInWorld(entityPetRock);
+				ChatHelper.Debug(com.YunusKayne.PetRock.entity.entityPetRock.customNameTag);
+			}
+			else if(item.getDisplayName() == this.getItemStackDisplayName(item))
+			{
+				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
+				ChatHelper.Debug(this.getItemStackDisplayName(item)  + " == " +  StatCollector.translateToLocal("item.itemPetRock.name"));
+				world.spawnEntityInWorld(entityPetRock);
+			}
 			return true;
 		}
 		return false;

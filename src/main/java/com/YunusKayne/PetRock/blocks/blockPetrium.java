@@ -17,6 +17,5 @@ public class blockPetrium extends Block
 		this.setStepSound(soundTypePiston);
 		this.setHardness(10.0F);
 		this.setResistance(10.0F);
-		
 	}
 }

@@ -15,6 +15,17 @@ buildscript {
     }
 }
 
+repositories {
+    maven { // The repo from which to get waila
+        name "Mobius Repo"
+        url "http://mobiusstrip.eu/maven"
+    }
+    maven { // the repo from which to get NEI and stuff 
+        name 'CB Repo'
+        url "http://chickenbones.net/maven/"
+    }
+}
+
 apply plugin: 'forge'
 
 version = "1.7.10-0.1-ALPHA"
@@ -40,6 +51,12 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.3.138:dev"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.7.46:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.5.111:dev"
+    
+    compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
 }
 
 processResources

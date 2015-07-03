@@ -26,6 +26,9 @@ PetriumPickaxe.info3=- Zijden Streling Op Glas
 PetriumPickaxe.info4=Resterende Toepassingen:
 
 
+#WAILA
+Waila.Stone.info1=Gebruik de Petrium Houweel om Verpletterde Steen te verkrijgen.
+
 
 #Configuration
 Config.useItemPetRock=Gebruik de Pet Rock zelf. (Als het false is dan gaat het de standaard spawn ei gebruiken.)
