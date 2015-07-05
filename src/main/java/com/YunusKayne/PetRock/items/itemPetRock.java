@@ -44,14 +44,14 @@ public class itemPetRock extends Item
 			entityPetRock.setLocationAndAngles(x, y+1.5, z, yaw, pitch);
 			
 			com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
-			if(item.getDisplayName() != this.getItemStackDisplayName(item))
+			if(!Items.displayNameEqualsName(item))
 			{
 				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = item.getDisplayName();
-				ChatHelper.Debug(item.getDisplayName()  + " =lol= " +  StatCollector.translateToLocal("item.itemPetRock.name"));
+				ChatHelper.Debug("'" + item.getDisplayName()  + "' =lol= '" +  StatCollector.translateToLocal("item.itemPetRock.name") + "'");
 				world.spawnEntityInWorld(entityPetRock);
 				ChatHelper.Debug(com.YunusKayne.PetRock.entity.entityPetRock.customNameTag);
 			}
-			else if(item.getDisplayName() == this.getItemStackDisplayName(item))
+			else if(Items.displayNameEqualsName(item))
 			{
 				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
 				ChatHelper.Debug(this.getItemStackDisplayName(item)  + " == " +  StatCollector.translateToLocal("item.itemPetRock.name"));

@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.StatCollector;
 
+import com.YunusKayne.PetRock.API.Waila.Waila;
 import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.init.PetRockEventHandler;
 import com.YunusKayne.PetRock.utility.ChatHelper;

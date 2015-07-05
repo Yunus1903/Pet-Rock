@@ -2,6 +2,7 @@ package com.YunusKayne.PetRock.entity;
 
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.utility.ChatHelper;
+import com.YunusKayne.PetRock.utility.NBTHelper;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -10,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 public class entityPetRock extends EntityAnimal
@@ -58,7 +60,13 @@ public class entityPetRock extends EntityAnimal
 
 	protected Item getDropItem()
 	{
-		this.entityDropItem(new ItemStack(com.YunusKayne.PetRock.init.Items.itemPetRock), 0.0F);
+		ItemStack item = new ItemStack(com.YunusKayne.PetRock.init.Items.itemPetRock);
+		this.entityDropItem(item, 0.0F);
+		if(this.getCustomNameTag() != StatCollector.translateToLocal("item.itemPetRock.name"))
+		{
+			ChatHelper.Debug("lol");
+			item.setStackDisplayName(this.getCustomNameTag());
+		}
 		return Item.getItemById(0);
 	}
 
@@ -85,7 +93,6 @@ public class entityPetRock extends EntityAnimal
 			{
 				--itemstack.stackSize;
 				player.inventory.addItemStackToInventory(new ItemStack(com.YunusKayne.PetRock.init.Items.canisterEmptyLove));
-				this.setHealth(Health + 2.0F);
 
 				if (itemstack.stackSize <= 0)
 				{
@@ -115,6 +122,9 @@ public class entityPetRock extends EntityAnimal
 
 			if (this.inLove % 10 == 0)
 			{
+				Health = Health + 2.0F;
+				this.setHealth(Health);
+				
 				double d0 = this.rand.nextGaussian() * 0.02D;
 				double d1 = this.rand.nextGaussian() * 0.02D;
 				double d2 = this.rand.nextGaussian() * 0.02D;

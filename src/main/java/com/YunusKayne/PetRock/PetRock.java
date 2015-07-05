@@ -3,7 +3,7 @@ package com.YunusKayne.PetRock;
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.client.render.RenderItemPetRock;
 import com.YunusKayne.PetRock.client.settings.Keybindings;
-import com.YunusKayne.PetRock.init.BlocksHandler;
+import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
 import com.YunusKayne.PetRock.init.Liquids;
@@ -34,13 +34,13 @@ import net.minecraftforge.common.MinecraftForge;
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
 //STARTING DATE: 13/05/2015
 
-/*	If you are planning to update then change the version number in Reference class, build.gradle and modmc.info
+/*	If you are planning to update then change the version number in Reference class, build.gradle and mcmod.info
  * 	
  * 	ToDo List:
  * 
- * - Liquid love
- * - When youre not looking the Pet Rock will move slowly
  * - Never use IntelJ
+ * - Liquid love
+ * - When your not looking the Pet Rock will move slowly
  */	
 
 public class PetRock
@@ -65,7 +65,7 @@ public class PetRock
 		
 		WorldGen WorldGen = new WorldGen();		
 		
-		BlocksHandler.initBlocks();
+		Blocks.initBlocks();
 		Items.initItems();
 		Tools.initTools();
 		Entity.initEntity();

@@ -1,5 +1,7 @@
 package com.YunusKayne.PetRock.API.Waila;
 
+import com.YunusKayne.PetRock.API.Waila.Handler.WailaBlockHandler;
+import com.YunusKayne.PetRock.entity.entityPetRock;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
 import mcp.mobius.waila.api.IWailaRegistrar;
@@ -11,7 +13,6 @@ public class Waila
 {
 	public static void onCall(IWailaRegistrar registrar)
 	{
-		registrar.registerStackProvider(new WailaStoneHandler(), BlockStone.class);
-		registrar.registerBodyProvider(new WailaStoneHandler(), BlockStone.class);
+		WailaBlockHandler.RegisterBlockInfo(registrar, Blocks.stone, "Stone.info1");
 	}
 }

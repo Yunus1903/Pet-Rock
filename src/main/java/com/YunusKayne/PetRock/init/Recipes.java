@@ -12,7 +12,7 @@ public class Recipes
 	public static void init()
 	{
 		//Shaped Recipe
-		GameRegistry.addRecipe(new ItemStack(BlocksHandler.blockPetrium, 1),
+		GameRegistry.addRecipe(new ItemStack(com.YunusKayne.PetRock.init.Blocks.blockPetrium, 1),
 				"AAA",
 				"AAA",
 				"AAA",
@@ -34,11 +34,11 @@ public class Recipes
 				"AAA",
 				" B ",
 				" B ",
-				'A', BlocksHandler.blockPetrium, 'B', net.minecraft.init.Items.stick);
+				'A', com.YunusKayne.PetRock.init.Blocks.blockPetrium, 'B', net.minecraft.init.Items.stick);
 		
 		
 		//Shapeless Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium, 9), new ItemStack(BlocksHandler.blockPetrium));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.matterPetrium, 9), new ItemStack(com.YunusKayne.PetRock.init.Blocks.blockPetrium));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.canisterEmptyLove, 1), new ItemStack(Items.canisterLove));
 		
 			//Extra Random Recipes
@@ -74,7 +74,7 @@ public class Recipes
 		
 		
 		//Smelting Recipe
-		GameRegistry.addSmelting(BlocksHandler.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
+		GameRegistry.addSmelting(com.YunusKayne.PetRock.init.Blocks.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
 		
 		//Petrium Pickaxe Recipe
 		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);

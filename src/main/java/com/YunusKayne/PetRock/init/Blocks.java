@@ -8,7 +8,7 @@ import com.YunusKayne.PetRock.blocks.orePetrium;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class BlocksHandler
+public class Blocks
 {
 	//List of blocks
 	public static orePetrium orePetrium = new orePetrium(Material.rock, "orePetrium");
@@ -21,6 +21,6 @@ public class BlocksHandler
 		GameRegistry.registerBlock(blockPetrium, "blockPetrium");
 		
 		//OreDictionary
-		OreDictionary.registerOre("orePetrium", BlocksHandler.orePetrium);
+		OreDictionary.registerOre("orePetrium", Blocks.orePetrium);
 	}
 }

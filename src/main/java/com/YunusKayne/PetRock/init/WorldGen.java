@@ -36,7 +36,7 @@ public class WorldGen implements IWorldGenerator
                 int chunkY = random.nextInt(30); //Below number ** it will spawn
                 int chunkZ = z + random.nextInt(16); //Where it spawns
                
-                (new WorldGenMinable(BlocksHandler.orePetrium, 3)).generate(world, random, chunkX, chunkY, chunkZ); //Chunks of ...
+                (new WorldGenMinable(Blocks.orePetrium, 3)).generate(world, random, chunkX, chunkY, chunkZ); //Chunks of ...
         }
 	}
 

@@ -1,5 +1,7 @@
 package com.YunusKayne.PetRock.init;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
@@ -36,5 +38,15 @@ public class Items
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
 		OreDictionary.registerOre("crushedStone", Items.crushedStone);
+	}
+	
+	public static boolean displayNameEqualsName(ItemStack itemStack) //Best name ever :P
+	{
+		String name = itemStack.getUnlocalizedName();
+		if(itemStack.getDisplayName() == StatCollector.translateToLocal(name))
+		{
+			return true;
+		}
+		return false;
 	}
 }
