@@ -2,6 +2,7 @@ package com.YunusKayne.PetRock.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 import com.YunusKayne.PetRock.utility.RecipeHandler;
 
@@ -77,7 +78,7 @@ public class Recipes
 		GameRegistry.addSmelting(com.YunusKayne.PetRock.init.Blocks.orePetrium, new ItemStack(Items.matterPetrium), 0.5f);
 		
 		//Petrium Pickaxe Recipe
-		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass);
-		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass),  Blocks.glass);
+		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass); //meta get's loaded in-game so it will always be 0
+		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass), Blocks.glass);
 	}
 }

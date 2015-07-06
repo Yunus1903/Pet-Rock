@@ -58,4 +58,9 @@ public class RecipeHandler
 		}
 		return a;
 	}
+	
+	public static int meta()
+	{
+		return 0;
+	}
 }

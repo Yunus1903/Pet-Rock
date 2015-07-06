@@ -72,7 +72,7 @@ public class PetRockEventHandler
 		 */
 		if(event.block.equals(Blocks.stained_glass_pane)) {
 			if(RecipeHandler.PetriumPick) {
-				event.drops.add(new ItemStack(Blocks.stained_glass_pane,1,event.blockMetadata));
+				event.drops.add(new ItemStack(Blocks.stained_glass_pane, 1, event.blockMetadata));
 			}
 		}
 		/*
