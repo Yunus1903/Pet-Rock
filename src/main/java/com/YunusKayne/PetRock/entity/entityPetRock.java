@@ -1,14 +1,11 @@
 package com.YunusKayne.PetRock.entity;
 
-import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.utility.ChatHelper;
-import com.YunusKayne.PetRock.utility.NBTHelper;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -30,6 +27,7 @@ public class entityPetRock extends EntityAnimal
 		this.setHealth(Health);
 		if(!customNameTag.isEmpty()) this.setCustomNameTag(customNameTag);
 		//ChatHelper.ChatMessage("PetRockTime");
+		//world.getWorldTime()
 	}
 
 	@Override
@@ -49,6 +47,12 @@ public class entityPetRock extends EntityAnimal
 	{
 		return true;
 	}
+	
+	@Override
+	public boolean canBePushed()
+    {
+        return false;
+    }
 
 	@Override
 	protected void applyEntityAttributes()
@@ -65,7 +69,7 @@ public class entityPetRock extends EntityAnimal
 		if(this.getCustomNameTag() != StatCollector.translateToLocal("item.itemPetRock.name"))
 		{
 			ChatHelper.Debug("lol");
-			item.setStackDisplayName(this.getCustomNameTag());
+			if(!this.getCustomNameTag().isEmpty()) item.setStackDisplayName(this.getCustomNameTag());
 		}
 		return Item.getItemById(0);
 	}
@@ -88,7 +92,9 @@ public class entityPetRock extends EntityAnimal
 		ItemStack itemstack = player.inventory.getCurrentItem();
 
 		if (itemstack != null && this.isBreedingItem(itemstack) && this.inLove <= 0)
-		{
+		{	
+			Health = Health + 2.0F;
+			this.setHealth(Health);
 			if (!player.capabilities.isCreativeMode)
 			{
 				--itemstack.stackSize;
@@ -119,12 +125,9 @@ public class entityPetRock extends EntityAnimal
 		{
 			--this.inLove;
 			String s = "heart";
-
+			
 			if (this.inLove % 10 == 0)
-			{
-				Health = Health + 2.0F;
-				this.setHealth(Health);
-				
+			{	
 				double d0 = this.rand.nextGaussian() * 0.02D;
 				double d1 = this.rand.nextGaussian() * 0.02D;
 				double d2 = this.rand.nextGaussian() * 0.02D;

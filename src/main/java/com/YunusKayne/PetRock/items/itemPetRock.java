@@ -47,14 +47,14 @@ public class itemPetRock extends Item
 			if(!Items.displayNameEqualsName(item))
 			{
 				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = item.getDisplayName();
-				ChatHelper.Debug("'" + item.getDisplayName()  + "' =lol= '" +  StatCollector.translateToLocal("item.itemPetRock.name") + "'");
+				ChatHelper.Debug("'" + item.getDisplayName()  + "' =notEqual= '" +  StatCollector.translateToLocal("item.itemPetRock.name") + "'");
 				world.spawnEntityInWorld(entityPetRock);
 				ChatHelper.Debug(com.YunusKayne.PetRock.entity.entityPetRock.customNameTag);
 			}
 			else if(Items.displayNameEqualsName(item))
 			{
 				com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
-				ChatHelper.Debug(this.getItemStackDisplayName(item)  + " == " +  StatCollector.translateToLocal("item.itemPetRock.name"));
+				ChatHelper.Debug(this.getItemStackDisplayName(item)  + " =Equal= " +  StatCollector.translateToLocal("item.itemPetRock.name"));
 				world.spawnEntityInWorld(entityPetRock);
 			}
 			return true;

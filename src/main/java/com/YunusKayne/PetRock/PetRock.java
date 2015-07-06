@@ -1,8 +1,6 @@
 package com.YunusKayne.PetRock;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
-import com.YunusKayne.PetRock.client.render.RenderItemPetRock;
-import com.YunusKayne.PetRock.client.settings.Keybindings;
 import com.YunusKayne.PetRock.init.Blocks;
 import com.YunusKayne.PetRock.init.Entity;
 import com.YunusKayne.PetRock.init.Items;
@@ -16,7 +14,6 @@ import com.YunusKayne.PetRock.proxy.IProxy;
 import com.YunusKayne.PetRock.reference.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -25,10 +22,6 @@ import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.World;
-import net.minecraftforge.client.IItemRenderer;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)

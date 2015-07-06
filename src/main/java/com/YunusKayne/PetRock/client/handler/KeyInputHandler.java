@@ -53,4 +53,9 @@ public class KeyInputHandler
 		
 		return false;	
 	}
+	
+	private static boolean isManmaedWeird()
+	{
+		return true;
+	}
 }
