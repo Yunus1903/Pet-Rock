@@ -14,7 +14,6 @@ public class Tab
 		public Item getTabIconItem()
 		{
 			return Items.matterPetrium;
-			
 		}
 	};
 }

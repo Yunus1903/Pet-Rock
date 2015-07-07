@@ -68,10 +68,9 @@ public class entityPetRock extends EntityAnimal
 	{
 		ItemStack item = new ItemStack(com.YunusKayne.PetRock.init.Items.itemPetRock);
 		this.entityDropItem(item, 0.0F);
-		if(this.getCustomNameTag() != StatCollector.translateToLocal("item.itemPetRock.name"))
+		//if(this.getCustomNameTag() != StatCollector.translateToLocal("item.itemPetRock.name"))
 		{
-			ChatHelper.Debug("lol");
-			if(!this.getCustomNameTag().isEmpty() && customNameTag != null && customNameTag != " ") item.setStackDisplayName(this.getCustomNameTag());
+			//if(!this.getCustomNameTag().isEmpty() && customNameTag != null && customNameTag != " ") item.setStackDisplayName(this.getCustomNameTag());
 		}
 		return Item.getItemById(0);
 	}

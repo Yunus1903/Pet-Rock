@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.items.matterPetrium;
 import com.YunusKayne.PetRock.items.tools.PetriumPickaxe;
 
@@ -17,6 +18,6 @@ public class Tools
 	
 	public static void initTools()
 	{
-		GameRegistry.registerItem(PetriumPickaxe, "PetriumPickaxe");
+		if(ConfigHandler.debugMode) GameRegistry.registerItem(PetriumPickaxe, "PetriumPickaxe"); //DEBUG
 	}
 }

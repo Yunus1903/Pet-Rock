@@ -18,10 +18,10 @@ and some more Coding by KakesRevenge!",
 
 "logoFile": "",
 "screenshots": [],
-"url": "https://github.com/Yunus1903/Pet-Rock",
-"updateUrl": "https://github.com/Yunus1903/Pet-Rock",
+"url": "http://minecraft.curseforge.com/mc-mods/230556-pet-rock-mod",
+"updateUrl": "http://minecraft.curseforge.com/mc-mods/230556-pet-rock-mod",
 
-"dependencies": [ "mod_MinecraftForge", "Waila" ],
+"dependencies": [ "mod_MinecraftForge", "YCore", "Waila" ],
 "requiredMods": [ "Forge" ],
 "useDependencyInformation": true
 }

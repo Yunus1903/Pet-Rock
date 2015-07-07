@@ -20,6 +20,7 @@ public class PetRockEventHandler
 	public static ItemStack CurrentItem;
 	public static HarvestDropsEvent Event;
 
+	/*
 	@SubscribeEvent
 	public void harvestDrops(HarvestDropsEvent event)
 	{
@@ -61,31 +62,16 @@ public class PetRockEventHandler
 				}
 			}
 		}
-
-		/*
-		if(event.block.equals(Blocks.stained_glass)) {
-			ItemStack CurrentItem = event.harvester.getCurrentEquippedItem();
-			if(CurrentItem.getItem().equals(Tools.PetriumPickaxe)) {
-				event.drops.add(new ItemStack(Blocks.stained_glass,1,event.blockMetadata));
-			}
-		}
-		 */
 		if(event.block.equals(Blocks.stained_glass_pane)) {
 			if(RecipeHandler.PetriumPick) {
 				event.drops.add(new ItemStack(Blocks.stained_glass_pane, 1, event.blockMetadata));
 			}
 		}
-		/*
-		if(event.block.equals(Blocks.glass)) {
-			if(CurrentItem.getItem().equals(PetriumPick)) {
-				event.drops.add(new ItemStack(Blocks.glass,1,event.blockMetadata));
-			}
-		}
-		 */
 		if(event.block.equals(Blocks.glass_pane)) {
 			if(RecipeHandler.PetriumPick) {
 				event.drops.add(new ItemStack(Blocks.glass_pane,1,event.blockMetadata));
 			}
 		}
 	}
+	*/
 }

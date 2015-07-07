@@ -43,6 +43,7 @@ public class itemPetRock extends Item
 			entityPetRock entityPetRock = new entityPetRock(world);
 			entityPetRock.setLocationAndAngles(x, y+1.5, z, yaw, pitch);
 			
+			/*
 			com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";
 			if(!Items.displayNameEqualsName(item))
 			{
@@ -57,6 +58,8 @@ public class itemPetRock extends Item
 				ChatHelper.Debug(this.getItemStackDisplayName(item)  + " =Equal= " +  StatCollector.translateToLocal("item.itemPetRock.name"));
 				world.spawnEntityInWorld(entityPetRock);
 			}
+			*/
+			world.spawnEntityInWorld(entityPetRock); //DEBUG
 			return true;
 		}
 		return false;

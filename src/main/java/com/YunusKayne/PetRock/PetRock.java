@@ -31,7 +31,6 @@ import net.minecraftforge.common.MinecraftForge;
  * 	
  * 	ToDo List:
  * 
- * - Never use IntelJ
  * - Liquid love
  * - When your not looking the Pet Rock will move slowly
  */	

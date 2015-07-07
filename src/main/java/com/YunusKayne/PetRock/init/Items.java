@@ -33,7 +33,7 @@ public class Items
 		GameRegistry.registerItem(canisterLove, "canisterLove");
 		GameRegistry.registerItem(canisterEmptyLove, "canisterEmptyLove");
 		if(ConfigHandler.useItemPetRock) GameRegistry.registerItem(itemPetRock, "itemPetRock");
-		GameRegistry.registerItem(crushedStone, "crushedStone");
+		if(ConfigHandler.debugMode) GameRegistry.registerItem(crushedStone, "crushedStone"); //DEBUG
 		
 		//OreDictionary
 		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);

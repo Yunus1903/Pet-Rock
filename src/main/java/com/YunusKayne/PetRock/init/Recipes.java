@@ -48,7 +48,22 @@ public class Recipes
 		
 		
 		//Petrium Pickaxe Recipe
-		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass); //meta get's loaded in-game so it will always be 0
-		RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass), Blocks.glass);
+		//RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.stained_glass, 1, PetRockEventHandler.meta), Blocks.stained_glass); //meta get's loaded in-game so it will always be 0
+		//RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass), Blocks.glass);
+		
+		//Temp Recipe's (DEBUG)
+		GameRegistry.addRecipe(new ItemStack(Items.itemPetRock, 1),
+				"ABA",
+				"BAB",
+				"ABA",
+				'A', Items.matterPetrium, 'B', Blocks.cobblestone);
+		
+		GameRegistry.addRecipe(new ItemStack(Items.canisterLove, 1),
+				"BCB",
+				"CAC",
+				"BCB",
+				'A', Items.canisterEmptyLove, 'B', Items.matterPetrium, 'C', Blocks.red_flower);
+		
+		
 	}
 }
