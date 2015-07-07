@@ -8,6 +8,7 @@ import com.YunusKayne.PetRock.reference.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -30,11 +31,11 @@ public class PetriumPickaxe extends ItemPickaxe
 	{
 		int usesRemaining = stack.getMaxDamage() - stack.getItemDamage();
 		
-		list.add("§6" + StatCollector.translateToLocal("PetriumPickaxe.info1"));
+		list.add(EnumChatFormatting.GOLD + StatCollector.translateToLocal("PetriumPickaxe.info1"));
 		list.add("");
 		list.add(StatCollector.translateToLocal("PetriumPickaxe.info2"));
 		list.add(StatCollector.translateToLocal("PetriumPickaxe.info3"));
 		list.add("");
-		list.add("§8" + StatCollector.translateToLocal("PetriumPickaxe.info4") + " §7" + usesRemaining);
+		list.add(EnumChatFormatting.DARK_GRAY + StatCollector.translateToLocal("PetriumPickaxe.info4") + " " + EnumChatFormatting.GRAY + usesRemaining);
 	}
 }

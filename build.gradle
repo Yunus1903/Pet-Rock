@@ -57,6 +57,27 @@ dependencies {
     compile "codechicken:NotEnoughItems:1.7.10-1.0.5.111:dev"
     
     compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    
+    compile files('lib/YCore-1.7.10-1.0.jar')
+}
+
+
+// configure the source folders
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+    
+    api {
+         java {
+            srcDir 'src/api'
+         }
+    }
 }
 
 processResources

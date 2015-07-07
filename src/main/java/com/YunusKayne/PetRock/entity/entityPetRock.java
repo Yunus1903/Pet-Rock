@@ -25,9 +25,11 @@ public class entityPetRock extends EntityAnimal
 		this.setSize(0.8F, 0.5F);
 		this.isImmuneToFire = true;
 		this.setHealth(Health);
-		if(!customNameTag.isEmpty()) this.setCustomNameTag(customNameTag);
+		if(!customNameTag.isEmpty() && customNameTag != null && customNameTag != " ") this.setCustomNameTag(customNameTag);
 		//ChatHelper.ChatMessage("PetRockTime");
 		//world.getWorldTime()
+		
+		//Do something with love | Use Health for it
 	}
 
 	@Override
@@ -69,7 +71,7 @@ public class entityPetRock extends EntityAnimal
 		if(this.getCustomNameTag() != StatCollector.translateToLocal("item.itemPetRock.name"))
 		{
 			ChatHelper.Debug("lol");
-			if(!this.getCustomNameTag().isEmpty()) item.setStackDisplayName(this.getCustomNameTag());
+			if(!this.getCustomNameTag().isEmpty() && customNameTag != null && customNameTag != " ") item.setStackDisplayName(this.getCustomNameTag());
 		}
 		return Item.getItemById(0);
 	}
