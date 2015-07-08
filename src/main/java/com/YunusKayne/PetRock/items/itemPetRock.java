@@ -41,7 +41,7 @@ public class itemPetRock extends Item
 			float pitch = p.rotationPitch;
 			
 			entityPetRock entityPetRock = new entityPetRock(world);
-			entityPetRock.setLocationAndAngles(x, y+1.5, z, yaw, pitch);
+			entityPetRock.setLocationAndAngles(x+0.5, y+1.5, z+0.5, yaw, pitch);
 			
 			/*
 			com.YunusKayne.PetRock.entity.entityPetRock.customNameTag = "";

@@ -35,7 +35,7 @@ public class entityPetRock extends EntityAnimal
 	@Override
 	protected boolean isAIEnabled()
 	{
-		return false;
+		return true;
 	}
 
 	@Override

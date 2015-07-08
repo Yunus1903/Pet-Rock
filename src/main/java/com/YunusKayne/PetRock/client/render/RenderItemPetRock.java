@@ -31,8 +31,8 @@ public class RenderItemPetRock implements IItemRenderer
 	{
 		switch(type)
 		{
-			case EQUIPPED: return true;
-			default: return false;
+		case EQUIPPED: return true;
+		default: return false;
 		}
 	}
 
@@ -47,7 +47,7 @@ public class RenderItemPetRock implements IItemRenderer
 	{
 		switch(type)
 		{
-			case EQUIPPED:
+		case EQUIPPED:
 		{
 			GL11.glPushMatrix();
 
