@@ -16,14 +16,18 @@ buildscript {
 }
 
 repositories {
-    maven { // The repo from which to get waila
-        name "Mobius Repo"
-        url "http://mobiusstrip.eu/maven"
-    }
-    maven { // the repo from which to get NEI and stuff 
+	 maven { // ChickenBones Repo
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
+    maven { // ProfMobius Repo
+        name 'Mobius Repo'
+        url "http://mobiusstrip.eu/maven/"
+    }
+	maven { // tterrag Repo
+		name 'tterrag Repo'
+		url "http://maven.tterrag.com/"
+	}
 }
 
 apply plugin: 'forge'
@@ -57,6 +61,8 @@ dependencies {
     compile "codechicken:NotEnoughItems:1.7.10-1.0.5.111:dev"
     
     compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+	
+	compile "tterrag.core:ttCore:MC1.7.10-0.1.1-78:deobf"
     
     compile files('lib/YCore-1.7.10-1.0.jar')
 }
