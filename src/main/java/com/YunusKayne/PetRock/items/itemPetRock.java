@@ -1,21 +1,12 @@
 package com.YunusKayne.PetRock.items;
 
-import java.util.List;
-
-import com.YunusKayne.PetRock.PetRock;
-import com.YunusKayne.PetRock.creativetab.Tab;
-import com.YunusKayne.PetRock.entity.entityPetRock;
-import com.YunusKayne.PetRock.init.Items;
-import com.YunusKayne.PetRock.utility.ChatHelper;
-import com.YunusKayne.PetRock.utility.LogHelper;
-import com.YunusKayne.PetRock.utility.NBTHelper;
-
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityEgg;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import com.YunusKayne.PetRock.client.creativetab.Tab;
+import com.YunusKayne.PetRock.entity.entityPetRock;
 
 public class itemPetRock extends Item
 {	

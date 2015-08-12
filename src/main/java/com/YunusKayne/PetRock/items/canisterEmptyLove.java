@@ -1,10 +1,9 @@
 package com.YunusKayne.PetRock.items;
 
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-import com.YunusKayne.PetRock.creativetab.Tab;
-import com.YunusKayne.PetRock.reference.Reference;
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.creativetab.Tab;
 
 public class canisterEmptyLove extends Item
 {

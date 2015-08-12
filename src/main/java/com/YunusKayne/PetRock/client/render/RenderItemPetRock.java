@@ -1,11 +1,5 @@
 package com.YunusKayne.PetRock.client.render;
 
-import org.lwjgl.opengl.GL11;
-
-import com.YunusKayne.PetRock.client.models.ModelPetRock;
-import com.YunusKayne.PetRock.reference.Reference;
-import com.YunusKayne.PetRock.utility.ChatHelper;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainerCreative;
 import net.minecraft.client.gui.inventory.GuiInventory;
@@ -14,8 +8,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.IItemRenderer;
+
+import org.lwjgl.opengl.GL11;
+
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.models.ModelPetRock;
 
 public class RenderItemPetRock implements IItemRenderer
 {
@@ -39,7 +37,7 @@ public class RenderItemPetRock implements IItemRenderer
 	@Override
 	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper)
 	{
-		return false;
+		return true;
 	}
 
 	@Override
@@ -61,20 +59,11 @@ public class RenderItemPetRock implements IItemRenderer
 			GL11.glRotatef(0.0F, 0.0F, 1.0F, 0.0F); //y
 			GL11.glRotatef(-50.0F, 0.0F, 0.0F, 1.0F); //z
 
-			boolean isFirstPerson = false;
-
 			if(data[1] != null && data[1] instanceof EntityPlayer)
 			{
 				if(!((EntityPlayer)data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
 				{
 					GL11.glTranslatef(0.0F, -0.7F, 0.0F);
-				}
-				else
-				{
-					isFirstPerson = true;
-					GL11.glRotatef(0.0F, 1.0F, 0.0F, 0.0F); //x
-					GL11.glRotatef(0.0F, 0.0F, 1.0F, 0.0F); //y
-					GL11.glRotatef(-50.0F, 0.0F, 0.0F, 1.0F); //z
 				}
 			}
 			else

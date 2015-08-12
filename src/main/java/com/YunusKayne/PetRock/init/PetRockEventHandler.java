@@ -1,18 +1,7 @@
 package com.YunusKayne.PetRock.init;
 
-import java.util.Random;
-
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
-
-import com.YunusKayne.PetRock.utility.ChatHelper;
-import com.YunusKayne.PetRock.utility.RecipeHandler;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class PetRockEventHandler
 {		

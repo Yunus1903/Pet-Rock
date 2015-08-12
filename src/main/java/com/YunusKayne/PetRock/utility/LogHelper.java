@@ -2,7 +2,7 @@ package com.YunusKayne.PetRock.utility;
 
 import org.apache.logging.log4j.Level;
 
-import com.YunusKayne.PetRock.reference.Reference;
+import com.YunusKayne.PetRock.Reference;
 
 import cpw.mods.fml.common.FMLLog;
 

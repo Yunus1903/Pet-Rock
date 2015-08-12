@@ -12,8 +12,12 @@ item.crushedStone.name=Crushed Stone
 item.PetriumPickaxe.name=Petrium Pickaxe
 
 
+#TileEntitys
+tile.petrockCrate.name=Petrock Crate
+
+
 #Keys
-key.Category=Pet Rock
+key.Category=Petrock
 key.Hello=Hi!
 
 
@@ -31,17 +35,22 @@ Waila.Stone.Body=Use the Petrium Pickaxe to get Crushed Stone.
 
 
 #Configuration
-Config.useItemPetRock=Use the Pet Rock Spawn Item. (If it is false then it will use the default spawn egg.)
+Config.useItemPetRock=Use the Petrock Spawn Item. (If it is false then it will use the default spawn egg.)
 
 
 #ChatHelper
 Chat.Hello=Hi
-Chat.PetRockTime=It's Pet Rock Time!
+Chat.PetRockTime=It's Petrock Time!
+
+
+#Commands
+command.Reload.usage=/Petrock Reload
+command.Reload.success=Configuration Reloaded!
 
 
 #Entity's
-entity.entityPetRock.name=Pet Rock
+entity.entityPetRock.name=Petrock
 
 
 #CreativeTab
-itemGroup.PetRock=Pet Rock
+itemGroup.PetRock=Petrock

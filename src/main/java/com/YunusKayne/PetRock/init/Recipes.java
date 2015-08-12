@@ -2,10 +2,6 @@ package com.YunusKayne.PetRock.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
-
-import com.YunusKayne.PetRock.utility.RecipeHandler;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Recipes

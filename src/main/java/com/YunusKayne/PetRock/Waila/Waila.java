@@ -1,6 +1,6 @@
-package com.YunusKayne.PetRock.API.Waila;
+package com.YunusKayne.PetRock.Waila;
 
-import com.YunusKayne.PetRock.API.Waila.Handler.WailaStoneBlockHandler;
+import com.YunusKayne.PetRock.Waila.Handler.WailaStoneBlockHandler;
 
 import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.block.BlockStone;

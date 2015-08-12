@@ -1,7 +1,7 @@
 package com.YunusKayne.PetRock.client.render;
 
+import com.YunusKayne.PetRock.Reference;
 import com.YunusKayne.PetRock.entity.entityPetRock;
-import com.YunusKayne.PetRock.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,7 +14,8 @@ import net.minecraft.util.ResourceLocation;
 public class RenderPetRock extends RenderLiving
 {
     private static final ResourceLocation entityTextures = new ResourceLocation(Reference.MOD_ID +  ":textures/entity/entityPetRock.png");
-    private static final String __OBFID = "CL_00000984";
+    
+	private static final String __OBFID = "CL_00000984";
 
     public RenderPetRock(ModelBase p_i1253_1_, float p_i1253_2_)
     {

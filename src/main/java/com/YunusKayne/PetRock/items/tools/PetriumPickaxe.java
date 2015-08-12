@@ -2,8 +2,8 @@ package com.YunusKayne.PetRock.items.tools;
 
 import java.util.List;
 
-import com.YunusKayne.PetRock.creativetab.Tab;
-import com.YunusKayne.PetRock.reference.Reference;
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.creativetab.Tab;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
@@ -25,6 +25,7 @@ public class PetriumPickaxe extends ItemPickaxe
 		
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)

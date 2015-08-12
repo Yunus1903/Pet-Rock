@@ -1,11 +1,10 @@
 package com.YunusKayne.PetRock.init;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
-import com.YunusKayne.PetRock.items.matterPetrium;
 import com.YunusKayne.PetRock.items.tools.PetriumPickaxe;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -18,6 +17,12 @@ public class Tools
 	
 	public static void initTools()
 	{
-		if(ConfigHandler.debugMode) GameRegistry.registerItem(PetriumPickaxe, "PetriumPickaxe"); //DEBUG
+		if(ConfigHandler.debugMode) registerTool(PetriumPickaxe, "PetriumPickaxe"); //DEBUG
+	}
+	
+	private static void registerTool(Item tool, String name)
+	{
+		GameRegistry.registerItem(tool, name);
+		OreDictionary.registerOre(name, tool);
 	}
 }

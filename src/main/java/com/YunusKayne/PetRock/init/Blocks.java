@@ -1,5 +1,6 @@
 package com.YunusKayne.PetRock.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -17,10 +18,16 @@ public class Blocks
 	public static void initBlocks()
 	{
 		//Block Registry's
-		GameRegistry.registerBlock(orePetrium, "orePetrium");
-		GameRegistry.registerBlock(blockPetrium, "blockPetrium");
+		registerBlock(orePetrium, "orePetrium");
+		registerBlock(blockPetrium, "blockPetrium");
 		
 		//OreDictionary
-		OreDictionary.registerOre("orePetrium", Blocks.orePetrium);
+		//OreDictionary.registerOre("orePetrium", Blocks.orePetrium);
+	}
+	
+	private static void registerBlock(Block block, String name)
+	{
+		GameRegistry.registerBlock(block, name);
+		OreDictionary.registerOre(name, block);
 	}
 }

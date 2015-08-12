@@ -3,8 +3,8 @@ package com.YunusKayne.PetRock.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-import com.YunusKayne.PetRock.creativetab.Tab;
-import com.YunusKayne.PetRock.reference.Reference;
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.creativetab.Tab;
 
 public class orePetrium extends Block
 {
@@ -17,6 +17,5 @@ public class orePetrium extends Block
 		this.setStepSound(soundTypePiston);
 		this.setHardness(6.0F);
 		this.setResistance(5.0F);
-		
 	}
 }

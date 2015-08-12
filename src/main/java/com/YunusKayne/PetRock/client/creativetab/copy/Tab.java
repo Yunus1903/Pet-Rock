@@ -1,10 +1,10 @@
-package com.YunusKayne.PetRock.creativetab;
+package com.YunusKayne.PetRock.client.creativetab.copy;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
+import com.YunusKayne.PetRock.Reference;
 import com.YunusKayne.PetRock.init.Items;
-import com.YunusKayne.PetRock.reference.Reference;
 
 public class Tab
 {

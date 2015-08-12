@@ -1,20 +1,17 @@
 package com.YunusKayne.PetRock.init;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
-import com.YunusKayne.PetRock.client.models.ModelPetRock;
-import com.YunusKayne.PetRock.client.render.RenderPetRock;
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
 import com.YunusKayne.PetRock.items.crushedStone;
 import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.items.matterPetrium;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Items
@@ -29,15 +26,15 @@ public class Items
 	public static void initItems()
 	{
 		//Item Registry's
-		GameRegistry.registerItem(matterPetrium, "matterPetrium");
-		GameRegistry.registerItem(canisterLove, "canisterLove");
-		GameRegistry.registerItem(canisterEmptyLove, "canisterEmptyLove");
-		if(ConfigHandler.useItemPetRock) GameRegistry.registerItem(itemPetRock, "itemPetRock");
-		if(ConfigHandler.debugMode) GameRegistry.registerItem(crushedStone, "crushedStone"); //DEBUG
+		registerItem(matterPetrium, "matterPetrium");
+		registerItem(canisterLove, "canisterLove");
+		registerItem(canisterEmptyLove, "canisterEmptyLove");
+		if(ConfigHandler.useItemPetRock) registerItem(itemPetRock, "itemPetRock");
+		if(ConfigHandler.debugMode) registerItem(crushedStone, "crushedStone"); //DEBUG
 		
 		//OreDictionary
-		OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
-		OreDictionary.registerOre("crushedStone", Items.crushedStone);
+		//OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
+		//OreDictionary.registerOre("crushedStone", Items.crushedStone);
 	}
 	
 	public static boolean displayNameEqualsName(ItemStack itemStack) //Best name ever :P
@@ -48,5 +45,11 @@ public class Items
 			return true;
 		}
 		return false;
+	}
+	
+	private static void registerItem(Item item, String name)
+	{
+		GameRegistry.registerItem(item, name);
+		OreDictionary.registerOre(name, item);
 	}
 }

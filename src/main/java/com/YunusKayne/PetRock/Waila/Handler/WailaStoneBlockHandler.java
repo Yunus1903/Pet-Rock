@@ -1,8 +1,6 @@
-package com.YunusKayne.PetRock.API.Waila.Handler;
+package com.YunusKayne.PetRock.Waila.Handler;
 
 import java.util.List;
-
-import com.YunusKayne.PetRock.API.Waila.Waila;
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;

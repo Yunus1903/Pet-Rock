@@ -1,15 +1,16 @@
 package com.YunusKayne.PetRock.entity;
 
-import com.YunusKayne.PetRock.utility.ChatHelper;
-
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import com.YunusKayne.PetRock.utility.Kayne;
+
+import cpw.mods.fml.client.FMLClientHandler;
 
 public class entityPetRock extends EntityAnimal
 {
@@ -20,13 +21,14 @@ public class entityPetRock extends EntityAnimal
 	private float Health = 2.0F;
 
 	public entityPetRock(World world)
-	{
+	{	
 		super(world);
+		EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
 		this.setSize(0.8F, 0.5F);
 		this.isImmuneToFire = true;
 		this.setHealth(Health);
-		if(!customNameTag.isEmpty() && customNameTag != null && customNameTag != " ") this.setCustomNameTag(customNameTag);
-		//ChatHelper.ChatMessage("PetRockTime");
+		if(player.getCommandSenderName().equals("TheKayneGame")) this.setCustomNameTag(Kayne.getRandomName());
+		//else this.setCustomNameTag(customNameTag);
 		//world.getWorldTime()
 		
 		//Do something with love | Use Health for it

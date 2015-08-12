@@ -10,9 +10,12 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-import com.YunusKayne.PetRock.creativetab.Tab;
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.creativetab.Tab;
 import com.YunusKayne.PetRock.init.Items;
-import com.YunusKayne.PetRock.reference.Reference;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class canisterLove extends ItemFood
 {
@@ -35,7 +38,9 @@ public class canisterLove extends ItemFood
 		player.inventory.addItemStackToInventory(new ItemStack(Items.canisterEmptyLove));
     }
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
+	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
     {
 		list.add(StatCollector.translateToLocal("Info.wip"));

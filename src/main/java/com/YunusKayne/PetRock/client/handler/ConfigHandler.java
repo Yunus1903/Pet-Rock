@@ -5,7 +5,7 @@ import java.io.File;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.config.Configuration;
 
-import com.YunusKayne.PetRock.reference.Reference;
+import com.YunusKayne.PetRock.Reference;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
@@ -23,7 +23,6 @@ public class ConfigHandler
 		if(configuration == null)
 		{
 			configuration = new Configuration(configFile);
-			LogHelper.info("Configuration Loaded!");
 			loadConfiguration();
 		}
 	}
@@ -38,10 +37,12 @@ public class ConfigHandler
 		}
 	}
 	
-	private static void loadConfiguration()
+	public static void loadConfiguration()
 	{	
 		useItemPetRock = configuration.get(Configuration.CATEGORY_GENERAL, "Use itemPetRock", true, StatCollector.translateToLocal("Config.useItemPetRock")).getBoolean(true);
 		debugMode = configuration.get(Configuration.CATEGORY_GENERAL, "Debug Mode", false, StatCollector.translateToLocal("Config.debugMode")).getBoolean(false);
+		
+		LogHelper.info("Configuration Loaded!");
 		
 		if(configuration.hasChanged())
 		{
