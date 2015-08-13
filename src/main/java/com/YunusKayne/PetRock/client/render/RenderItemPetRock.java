@@ -49,7 +49,7 @@ public class RenderItemPetRock implements IItemRenderer
 		{
 			GL11.glPushMatrix();
 
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/items/itemPetRock.png"));
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/items/itemModelPetRock.png"));
 
 			float scale = 1.0F;
 

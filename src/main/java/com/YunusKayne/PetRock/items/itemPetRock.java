@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import com.YunusKayne.PetRock.Reference;
 import com.YunusKayne.PetRock.client.creativetab.Tab;
 import com.YunusKayne.PetRock.entity.entityPetRock;
 
@@ -16,6 +17,7 @@ public class itemPetRock extends Item
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setMaxStackSize(1);
 		this.setFull3D();
+		this.setTextureName(Reference.MOD_ID + ":" + name);
 	}
 
 	@Override

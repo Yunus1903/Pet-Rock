@@ -17,7 +17,8 @@ public class petrockCrate extends BlockContainer
 		super(Material.iron);
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
-		this.setBlockBounds(0.9F, 0.0F, 0.9F, 0.1F, 1.0F, 0.1F); //ToDo
+		this.setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.2F); //ToDo
+		this.setBlockTextureName(Reference.MOD_ID + ":" + name);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class RenderPetrockCrate extends TileEntitySpecialRenderer
 
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 
-		ResourceLocation textures = (new ResourceLocation(Reference.MOD_ID + ":textures/blocks/petrockCrate.png")); 
+		ResourceLocation textures = (new ResourceLocation(Reference.MOD_ID + ":textures/entity/petrockCrate.png")); 
 
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 
