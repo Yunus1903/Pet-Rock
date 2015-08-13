@@ -13,7 +13,7 @@ public class Tab
 		@Override
 		public Item getTabIconItem()
 		{
-			return Items.matterPetrium;
+			return Items.itemPetRock;
 		}
 	};
 }
