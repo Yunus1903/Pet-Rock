@@ -18,14 +18,14 @@ public class entityPetRock extends EntityAnimal
 
 	public static String customNameTag = "";
 
-	private float Health = 2.0F;
+	private float Health = 1.0F;
 
 	public entityPetRock(World world)
 	{	
 		super(world);
 		EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
 		this.setSize(0.8F, 0.5F);
-		this.isImmuneToFire = true;
+		this.isImmuneToFire = true; 
 		this.setHealth(Health);
 		if(player.getCommandSenderName().equals("TheKayneGame")) this.setCustomNameTag(Kayne.getRandomName());
 		//else this.setCustomNameTag(customNameTag);

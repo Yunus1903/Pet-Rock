@@ -17,7 +17,7 @@ public class petrockCrate extends BlockContainer
 		super(Material.iron);
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
-		this.setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.9F); //ToDo
+		this.setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.9F); 
 		this.setBlockTextureName(Reference.MOD_ID + ":" + name);
 		
 	}
@@ -49,4 +49,11 @@ public class petrockCrate extends BlockContainer
 	{
 		this.blockIcon = icon.registerIcon(Reference.MOD_ID + ":textures/items/matterPetrium.png");
 	}
+	
+	// Just Trying Click Events 
+	//public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer p5EP) {
+		//if(p5EP.inventory.currentItem == 0){
+			
+		//}
+	//}
 }
