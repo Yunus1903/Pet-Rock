@@ -5,6 +5,8 @@ import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 public class PetRockEventHandler
 {		
+	
+	
 	public static int meta;
 	public static ItemStack CurrentItem;
 	public static HarvestDropsEvent Event;

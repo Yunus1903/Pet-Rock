@@ -1,10 +1,5 @@
 package com.YunusKayne.PetRock.init;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
-import net.minecraftforge.oredict.OreDictionary;
-
 import com.YunusKayne.PetRock.client.handler.ConfigHandler;
 import com.YunusKayne.PetRock.items.canisterEmptyLove;
 import com.YunusKayne.PetRock.items.canisterLove;
@@ -13,6 +8,10 @@ import com.YunusKayne.PetRock.items.itemPetRock;
 import com.YunusKayne.PetRock.items.matterPetrium;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class Items
 {	

@@ -18,7 +18,7 @@ public class entityPetRock extends EntityAnimal
 
 	public static String customNameTag = "";
 
-	private float Health = 1.0F;
+	private float Health = 2.0F;
 
 	public entityPetRock(World world)
 	{	

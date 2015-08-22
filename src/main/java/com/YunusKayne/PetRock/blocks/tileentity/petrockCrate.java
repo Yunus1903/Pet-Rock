@@ -1,25 +1,32 @@
 package com.YunusKayne.PetRock.blocks.tileentity;
 
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-
 import com.YunusKayne.PetRock.Reference;
 import com.YunusKayne.PetRock.client.creativetab.Tab;
+import com.YunusKayne.PetRock.entity.entityPetRock;
 import com.YunusKayne.PetRock.entity.Tile.petrockCrateEntity;
+import com.YunusKayne.PetRock.init.Items;
+import com.YunusKayne.PetRock.init.TileEntitys;
+import com.YunusKayne.PetRock.utility.LogHelper;
+
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
 public class petrockCrate extends BlockContainer
 {
 	public petrockCrate(Material material, String name)
 	{
-		super(Material.iron);
+		super(material);
 		this.setBlockName(name);
 		this.setCreativeTab(Tab.PetRockTab);
 		this.setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.9F); 
 		this.setBlockTextureName(Reference.MOD_ID + ":" + name);
-		
+		this.setHardness(2.0F);
 	}
 
 	@Override
@@ -44,16 +51,40 @@ public class petrockCrate extends BlockContainer
 	{
 		return false;
 	}
-
-	public void registerIcons(IIconRegister icon)
-	{
-		this.blockIcon = icon.registerIcon(Reference.MOD_ID + ":textures/items/matterPetrium.png");
-	}
 	
-	// Just Trying Click Events 
-	//public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer p5EP) {
-		//if(p5EP.inventory.currentItem == 0){
-			
-		//}
-	//}
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+    {
+        if (world.isRemote)
+        {
+            return true;
+        }
+        else
+        {
+        	final InventoryPlayer inventory = player.inventory;
+        	
+        	if(ItemStack.areItemStacksEqual(inventory.getCurrentItem(), new ItemStack(Items.canisterLove)))
+        	{
+        		if (!player.capabilities.isCreativeMode)
+    			{
+        			inventory.decrStackSize(inventory.currentItem, 1);
+    			}
+        		world.setBlockToAir(x, y, z);
+        		
+    			float yaw = player.rotationYaw;
+    			float pitch = player.rotationPitch;
+    			
+    			final entityPetRock entityPetRock = new entityPetRock(world);
+    			entityPetRock.setLocationAndAngles(x+0.5, y+1.5, z+0.5, yaw, pitch);
+    			
+    			world.spawnEntityInWorld(entityPetRock);
+    			
+        		return true;
+        	}
+        	else
+        	{
+        		return false;
+        	}
+        }
+    }
 }

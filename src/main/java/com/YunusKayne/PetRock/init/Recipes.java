@@ -26,12 +26,17 @@ public class Recipes
 				"AA",
 				'A', Items.crushedStone);
 		
-		
 		GameRegistry.addRecipe(new ItemStack(Tools.PetriumPickaxe, 1),
 				"AAA",
 				" B ",
 				" B ",
 				'A', com.YunusKayne.PetRock.init.Blocks.blockPetrium, 'B', net.minecraft.init.Items.stick);
+		
+		GameRegistry.addRecipe(new ItemStack(TileEntitys.petrockCrate, 1),
+				"AAA",
+				"BCB",
+				"BBB",
+				'A', Blocks.wooden_slab, 'B', Blocks.planks, 'C', Items.matterPetrium);
 		
 		
 		//Shapeless Recipes
@@ -48,12 +53,6 @@ public class Recipes
 		//RecipeHandler.addPetriumPickaxeRecipe(new ItemStack(Blocks.glass), Blocks.glass);
 		
 		//Temp Recipe's (DEBUG)
-		GameRegistry.addRecipe(new ItemStack(Items.itemPetRock, 1),
-				"ABA",
-				"BAB",
-				"ABA",
-				'A', Items.matterPetrium, 'B', Blocks.cobblestone);
-		
 		GameRegistry.addRecipe(new ItemStack(Items.canisterLove, 1),
 				"BCB",
 				"CAC",

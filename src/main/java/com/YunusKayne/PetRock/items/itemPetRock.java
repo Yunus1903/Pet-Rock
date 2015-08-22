@@ -1,13 +1,13 @@
 package com.YunusKayne.PetRock.items;
 
+import com.YunusKayne.PetRock.Reference;
+import com.YunusKayne.PetRock.client.creativetab.Tab;
+import com.YunusKayne.PetRock.entity.entityPetRock;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-
-import com.YunusKayne.PetRock.Reference;
-import com.YunusKayne.PetRock.client.creativetab.Tab;
-import com.YunusKayne.PetRock.entity.entityPetRock;
 
 public class itemPetRock extends Item
 {	
@@ -29,7 +29,7 @@ public class itemPetRock extends Item
 			{
 				--item.stackSize;
 			}
-			EntityPlayer p = world.getClosestPlayer(x, y, z, 100);
+			EntityPlayer p = world.getClosestPlayer(x, y, z, 10);
 			float yaw = p.rotationYaw;
 			float pitch = p.rotationPitch;
 			
