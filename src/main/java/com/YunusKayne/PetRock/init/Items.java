@@ -30,10 +30,6 @@ public class Items
 		registerItem(canisterEmptyLove, "canisterEmptyLove");
 		if(ConfigHandler.useItemPetRock) registerItem(itemPetRock, "itemPetRock");
 		if(ConfigHandler.debugMode) registerItem(crushedStone, "crushedStone"); //DEBUG
-		
-		//OreDictionary
-		//OreDictionary.registerOre("matterPetrium", Items.matterPetrium);
-		//OreDictionary.registerOre("crushedStone", Items.crushedStone);
 	}
 	
 	public static boolean displayNameEqualsName(ItemStack itemStack) //Best name ever :P

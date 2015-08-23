@@ -21,12 +21,12 @@ public class Recipes
 				"AAA",
 				'A', Blocks.glass, 'B', net.minecraft.init.Items.diamond);
 		
-		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1),
+		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1), //Debug
 				"AA",
 				"AA",
 				'A', Items.crushedStone);
 		
-		GameRegistry.addRecipe(new ItemStack(Tools.PetriumPickaxe, 1),
+		GameRegistry.addRecipe(new ItemStack(Tools.PetriumPickaxe, 1), //Debug
 				"AAA",
 				" B ",
 				" B ",
@@ -36,7 +36,7 @@ public class Recipes
 				"AAA",
 				"BCB",
 				"BBB",
-				'A', Blocks.wooden_slab, 'B', Blocks.planks, 'C', Items.matterPetrium);
+				'A', Blocks.wooden_slab, 'B', Blocks.planks, 'C', com.YunusKayne.PetRock.init.Blocks.blockPetrium);
 		
 		
 		//Shapeless Recipes
