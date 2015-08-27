@@ -1,14 +1,14 @@
 package com.YunusKayne.PetRock.Waila;
 
-import com.YunusKayne.PetRock.Waila.Handler.WailaStoneBlockHandler;
+import com.YunusKayne.PetRock.Waila.Handler.WailaPetrockCrateHandler;
+import com.YunusKayne.PetRock.blocks.tileentity.petrockCrate;
 
 import mcp.mobius.waila.api.IWailaRegistrar;
-import net.minecraft.block.BlockStone;
 
 public class Waila
 {
 	public static void onCall(IWailaRegistrar registrar)
 	{
-		registrar.registerStackProvider(new WailaStoneBlockHandler(), BlockStone.class);
+		registrar.registerStackProvider(new WailaPetrockCrateHandler(), petrockCrate.class);
 	}
 }

@@ -74,20 +74,17 @@ public class PetRock
 		Liquids.initLiquids();
 		Recipes.init();
 		GameRegistry.registerWorldGenerator(WorldGen, 1);
-		
-		FMLInterModComms.sendMessage("Waila", "register", "com.YunusKayne.PetRock.API.Waila.Waila.onCall");
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{	
-		
+		FMLInterModComms.sendMessage("Waila", "register", "com.YunusKayne.PetRock.Waila.Waila.onCall");
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		LogHelper.info("Loading Complete!");
-		
 	}
 }

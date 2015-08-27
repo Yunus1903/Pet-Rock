@@ -94,7 +94,7 @@ public class entityPetRock extends EntityAnimal
 	{
 		ItemStack itemstack = player.inventory.getCurrentItem();
 
-		if (itemstack != null && this.isBreedingItem(itemstack) && this.inLove <= 0)
+		if (itemstack != null && this.isBreedingItem(itemstack) && this.inLove <= 0 && Health < 30)
 		{	
 			Health = Health + 2.0F;
 			this.setHealth(Health);

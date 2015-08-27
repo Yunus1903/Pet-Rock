@@ -37,12 +37,4 @@ public class canisterLove extends ItemFood
 		
 		player.inventory.addItemStackToInventory(new ItemStack(Items.canisterEmptyLove));
     }
-	
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override
-	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
-    {
-		list.add(StatCollector.translateToLocal("Info.wip"));
-    }
 }
