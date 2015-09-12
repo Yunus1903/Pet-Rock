@@ -12,6 +12,7 @@ import com.YunusKayne.PetRock.init.Tools;
 import com.YunusKayne.PetRock.init.WorldGen;
 import com.YunusKayne.PetRock.proxy.ClientProxy;
 import com.YunusKayne.PetRock.proxy.IProxy;
+import com.YunusKayne.PetRock.utility.Kayne;
 import com.YunusKayne.PetRock.utility.LogHelper;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -86,5 +87,6 @@ public class PetRock
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		LogHelper.info("Loading Complete!");
+		Kayne.getNames();
 	}
 }
