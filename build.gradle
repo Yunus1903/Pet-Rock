@@ -28,6 +28,10 @@ repositories {
 		name 'tterrag Repo'
 		url "http://maven.tterrag.com/"
 	}
+	maven { // Json.org
+        name 'json'
+        url "http://json.org/"
+    }
 }
 
 apply plugin: 'forge'
@@ -63,8 +67,10 @@ dependencies {
     compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
 	
 	compile "tterrag.core:ttCore:MC1.7.10-0.1.1-78:deobf"
+	
+	compile "org.json:json:20141113"
     
-    compile files('lib/YCore-1.7.10-1.0.jar')
+    //compile files('lib/YCore-1.7.10-1.0.jar')
 }
 
 
