@@ -4,6 +4,6 @@ For all your Pet Rock needs!
 
 Authors: 
 - Yunus1903:  *Code*
-- KakesRevenge: *Code*
-- JustKayneNL:  *Idea, Textures & Models*
+- JustKayneNL:  *Code, Idea and the Resources*
 - manmaed:  *Bug Fixing & Textures*
+- KakesRevenge: *Helping*
