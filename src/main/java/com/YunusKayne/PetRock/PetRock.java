@@ -87,6 +87,5 @@ public class PetRock
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		LogHelper.info("Loading Complete!");
-		Kayne.getNames();
 	}
 }

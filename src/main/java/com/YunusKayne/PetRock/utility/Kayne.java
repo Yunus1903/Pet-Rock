@@ -1,6 +1,7 @@
 package com.YunusKayne.PetRock.utility;
 
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Random;
 
@@ -11,38 +12,31 @@ import jdk.nashorn.api.scripting.URLReader;
 
 public class Kayne
 {
-	public static final String[] names =
-		{		
-			"Neko-Chan", "Goshujinsama", "Pierre", "Steiner", "Rokku", "Piedra", "Edelstein", "Wallenstein",
-			"Aiz", "Laura", "Riko", "Ako", "Gokan", "Okami", "Miia", "Suu",
-			"Papi", "Yuri", "manmaed", "Yuno", "Eryn", "Lingyin Huang", "Kana", "Kurumi",
-			"Dick", "Kim Jong-un", "Obama", "Masochist-Chan", "YuKay", "SOX"
-		};
-
 	public static String getRandomName()
 	{
 		Random random = new Random();
-		return names[random.nextInt(names.length -1)];
+		return getNames()[random.nextInt(getNames().length -1)];
 	}
 	
-	public static void getNames()
+	public static String[] getNames()
 	{
 		JSONParser parser = new JSONParser();
 		 
         try
         {
-            Object obj = parser.parse(new FileReader("http://widget.mcf.li/mc-mods/minecraft/230556-petrock-mod.json"));
+        	URL url = new URL("http://widget.mcf.li/mc-mods/minecraft/230556-petrock-mod.json");
+            Object obj = parser.parse(new InputStreamReader(url.openStream(), "UTF-8"));
  
             JSONObject jsonObject = (JSONObject) obj;
  
-            String title = (String) jsonObject.get("title");
- 
-            System.out.println(title);
- 
+            String[] names = (String[]) jsonObject.get("names");
+            
+            return names;
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
+		return null;
     }
 }
