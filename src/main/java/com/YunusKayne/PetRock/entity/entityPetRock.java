@@ -27,7 +27,7 @@ public class entityPetRock extends EntityAnimal
 		this.setSize(0.8F, 0.5F);
 		this.isImmuneToFire = true; 
 		this.setHealth(Health);
-		if(player.getCommandSenderName().equals("TheKayneGame")) this.setCustomNameTag(Kayne.getRandomName());
+		if(player.getCommandSenderName().equals("Yunus1903")) this.setCustomNameTag(Kayne.getRandomName());
 		//else this.setCustomNameTag(customNameTag);
 		//world.getWorldTime()
 		
