@@ -39,7 +39,7 @@ import net.minecraftforge.common.MinecraftForge;
 /*
  * ChangeLog:
  * 
- * - PetRock Renderer Fixed
+ * - poop
  * 
  */
 
