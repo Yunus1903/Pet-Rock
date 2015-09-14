@@ -11,6 +11,9 @@
 *.iws
 /.idea
 
+# Windows #
+*.db
+
 # Eclipse #
 /bin
 /.settings
