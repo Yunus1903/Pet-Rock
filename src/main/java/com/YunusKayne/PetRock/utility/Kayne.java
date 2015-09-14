@@ -32,13 +32,12 @@ public class Kayne
  
             String brokenArray = jsonObject.get("names").toString();
             
-            String[] tempNames = brokenArray.split("/(?!\")(.)\w+/igm");
+            String[] tempNames = brokenArray.split("/(?!\")(.)\\w+/igm");
             
             tempNames[0] = tempNames[0].split("/\\[\"/")[1];
             tempNames[tempNames.length-1] = tempNames[tempNames.length-1].split("/\"/\\]")[1];
             
             System.out.println(tempNames);
-            
             
             //System.out.println(names[random.nextInt(names.length -1)]);
             return "test";
